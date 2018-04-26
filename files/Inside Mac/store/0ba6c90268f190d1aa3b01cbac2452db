@@ -1,0 +1,3816 @@
+{
+	"hierarchy": {
+		"nodeType": "Root",
+		"id": "0",
+		"name": "root",
+		"children": [
+			{
+				"id": "f9f2fea4-3c0e-4c4b-bae1-950401c1ff55",
+				"name": "iMac Trigger Sierra.png.zpt0",
+				"children": [
+					{
+						"id": "b7a8f04e-e4ec-42b2-b809-739652449ffd",
+						"name": "Plane0",
+						"children": [
+							{
+								"id": "c0333d80-6e36-432b-b604-ba3b825593f7",
+								"name": "Plane0-pointerdown0",
+								"nodeType": "Script",
+								"children": [],
+								"parameters": {
+									"code": "const imac = symbol.nodes.iMac_inside_jpeg0;\nconst iMacOpeningTool = symbol.nodes.iMac_OpeningTool_png0;\n\n\n// TEXTS\nconst firstExplanation = symbol.nodes.FirstExplanation;\n\nvar stepCount = 1;\n\nparent.on(\"pointerdown\", (e) => {\n\t// Runs when pointerdown occurs on the parent node\n\t// The argument e contains useful info about this event:\n\t// https://docs.zap.works/studio/scripting/reference/object/events/pointerdown/\n\t\n\tvar stepSymbol = symbol.controllers.openingToolPosition.elements['Step' + stepCount];\n\tstepSymbol.activate();\n    stepCount++;\n\n    \n  /*  switch (stepCount){\n        case 0:\n            console.log(\"Step 0\");\n            break;\n        case 1:\n            console.log(\"Step 1\");\n            symbol.controllers.openingToolPosition.elements.Step1+.activate();\n            break;\n        case 2:\n            console.log(\"Step 2\");\n            symbol.controllers.openingToolPosition.elements.Step2.activate();\n            break;\n        case 3:\n            console.log(\"Step 3\");\n            symbol.controllers.openingToolPosition.elements.Step3.activate();\n            break;\n    }*/\n\t\n});\n\nvar display_shown = symbol.controllers.display.elements.shown;\nvar display_hidden = symbol.controllers.display.elements.hidden;\n\nparent.on(\"show\", parent_show);\nfunction parent_show() {\n\n    // Make sure we start from fully hidden\n    display_hidden.reset();\n\n    // Move to the shown state\n    display_shown.activate();\n\n    symbol.controllers.openingToolPosition.elements.Step0.activate();\n\n    // The Console log message\n    console.log(\"This is a console log message on show\");\n}"
+								},
+								"scriptName": "Plane0_pointerdown0"
+							}
+						],
+						"parameters": {
+							"type": "plane",
+							"layerMode": "overlay",
+							"visible": false,
+							"scale": [
+								10,
+								10,
+								10
+							],
+							"rotation": [
+								0,
+								0,
+								0
+							],
+							"position": [
+								0,
+								0,
+								0
+							],
+							"regionScale": [
+								10,
+								10,
+								10
+							]
+						},
+						"nodeType": "Object",
+						"scriptName": "Plane0"
+					},
+					{
+						"id": "e733590c-2e92-43f5-930b-babb20d4dc3e",
+						"name": "iMac inside.jpeg0",
+						"children": [],
+						"parameters": {
+							"materials": [
+								"c4affa16-9b63-46ef-805a-b18f22e11c09"
+							],
+							"type": "plane",
+							"layerMode": "overlay",
+							"scale": [
+								1.78,
+								1,
+								1
+							],
+							"visible": false
+						},
+						"nodeType": "Object",
+						"scriptName": "iMac_inside_jpeg0"
+					},
+					{
+						"id": "1d0be1f6-5265-447f-8a72-a4fa2c74e39c",
+						"name": "TextBackground",
+						"children": [],
+						"parameters": {
+							"type": "plane",
+							"layerMode": "overlay",
+							"visible": false,
+							"color": [
+								0.2784313725490196,
+								0.2627450980392157,
+								0.2627450980392157,
+								1
+							]
+						},
+						"nodeType": "Object",
+						"scriptName": "TextBackground"
+					},
+					{
+						"id": "f9c695fb-092b-44af-a04c-f1b1065ec196",
+						"name": "redPoint2.png2",
+						"children": [],
+						"parameters": {
+							"materials": [
+								"b5197553-3a3b-4a93-8c68-589c8e09faf6"
+							],
+							"type": "plane",
+							"layerMode": "overlay",
+							"scale": [
+								0.3,
+								0.3,
+								0.3
+							],
+							"visible": false
+						},
+						"nodeType": "Object",
+						"scriptName": "redPoint2_png2"
+					},
+					{
+						"id": "da782786-1fa3-4f4a-a4ac-e003318a673a",
+						"name": "redPoint2.png1",
+						"children": [],
+						"parameters": {
+							"materials": [
+								"b5197553-3a3b-4a93-8c68-589c8e09faf6"
+							],
+							"type": "plane",
+							"layerMode": "overlay",
+							"scale": [
+								0.3,
+								0.3,
+								0.3
+							],
+							"visible": false
+						},
+						"nodeType": "Object",
+						"scriptName": "redPoint2_png1"
+					},
+					{
+						"id": "61bacad7-6b06-4034-92df-e1692ecc66cb",
+						"name": "redPoint.png0",
+						"children": [],
+						"parameters": {
+							"materials": [
+								"b5197553-3a3b-4a93-8c68-589c8e09faf6"
+							],
+							"type": "plane",
+							"layerMode": "overlay",
+							"scale": [
+								1,
+								1,
+								1
+							],
+							"enabled": true,
+							"visible": false
+						},
+						"nodeType": "Object",
+						"scriptName": "redPoint_png0"
+					},
+					{
+						"id": "81e11f13-eeac-4486-976a-167f1da8f5a6",
+						"name": "FourthExplanation",
+						"nodeType": "Text",
+						"children": [],
+						"parameters": {
+							"font": "Roboto.ttf",
+							"text": "Wheel the tool down\nalong the right side of\nthe display and finish\npushing the opening tool\nto the bottom of the right\nside of the display.",
+							"layerMode": "overlay",
+							"lines": 7.172274971548636,
+							"scale": [
+								0.3586137485774317,
+								0.3586137485774317,
+								0.3586137485774317
+							],
+							"lineScale": 1.863061948804827,
+							"position": [
+								-2.8,
+								-1,
+								0
+							],
+							"shadow": [
+								0,
+								0,
+								0
+							],
+							"visible": false
+						},
+						"scriptName": "FourthExplanation"
+					},
+					{
+						"id": "f52565a9-269a-48ae-b700-21da30ae0db1",
+						"name": "ThirdExplanation",
+						"nodeType": "Text",
+						"children": [],
+						"parameters": {
+							"font": "Roboto.ttf",
+							"text": "Cut the adhesive along\nthe top of the display.",
+							"layerMode": "overlay",
+							"lines": 5.131137620180588,
+							"scale": [
+								0.25655688100902935,
+								0.25655688100902935,
+								0.25655688100902935
+							],
+							"lineScale": 2.604177392027775,
+							"position": [
+								-2.8,
+								-1,
+								0
+							],
+							"shadow": [
+								0,
+								0,
+								0
+							],
+							"visible": false
+						},
+						"scriptName": "ThirdExplanation"
+					},
+					{
+						"id": "7e062883-e2c3-4c7c-a5ff-fc8e41be5636",
+						"name": "SecondExplanation",
+						"nodeType": "Text",
+						"children": [],
+						"parameters": {
+							"font": "Roboto.ttf",
+							"text": "Use the tool like a pizza cutter:\nroll it along through the gap,\nand it will cut the foam adhesive\nthrough the center.",
+							"layerMode": "overlay",
+							"lines": 5.131137620180588,
+							"scale": [
+								0.25655688100902935,
+								0.25655688100902935,
+								0.25655688100902935
+							],
+							"lineScale": 2.604177392027775,
+							"position": [
+								-2.8,
+								1.6,
+								0
+							],
+							"shadow": [
+								0,
+								0,
+								0
+							]
+						},
+						"scriptName": "SecondExplanation"
+					},
+					{
+						"id": "3c6783ec-fcef-43ad-b7c0-4b9a987fe658",
+						"name": "FirstExplanation",
+						"nodeType": "Text",
+						"children": [],
+						"parameters": {
+							"font": "Roboto.ttf",
+							"text": "Starting on the left of the display,\nnear the power button, insert the\niMac Opening Tool into the gap\nbetween the glass panel and the\nrear case.",
+							"layerMode": "overlay",
+							"lines": 5.131137620180588,
+							"scale": [
+								0.25655688100902935,
+								0.25655688100902935,
+								0.25655688100902935
+							],
+							"lineScale": 2.604177392027775,
+							"position": [
+								-2.8,
+								-1,
+								0
+							],
+							"shadow": [
+								0,
+								0,
+								0
+							]
+						},
+						"scriptName": "FirstExplanation"
+					},
+					{
+						"id": "6d5948e4-7e92-4add-9c12-820d47c54e81",
+						"name": "iMac Opening Tool.png0",
+						"children": [],
+						"parameters": {
+							"materials": [
+								"11125d9c-822d-4d7e-aa94-5fdba2f401ad"
+							],
+							"type": "plane",
+							"layerMode": "overlay",
+							"scale": [
+								0.5975,
+								0.25,
+								0.25
+							],
+							"position": [
+								-2.659922999999999,
+								-1.7497589999999992,
+								0
+							],
+							"regionScale": [
+								1,
+								1.324884,
+								1
+							]
+						},
+						"nodeType": "Object",
+						"scriptName": "iMac_OpeningTool_png0"
+					},
+					{
+						"id": "215e4c8a-181f-4943-b467-33c1c3b55a2f",
+						"name": "SixthExplanation",
+						"nodeType": "Text",
+						"children": [],
+						"parameters": {
+							"font": "Roboto.ttf",
+							"text": "Remove two 10.0 mm T10 screws\nlocated on the left speaker",
+							"layerMode": "overlay",
+							"scale": [
+								0.9459463944371814,
+								0.9459463944371814,
+								0.9459463944371814
+							],
+							"lineScale": 1.7242718703533741,
+							"lines": 5.675678366623088,
+							"position": [
+								4,
+								-1,
+								0
+							],
+							"visible": false
+						},
+						"scriptName": "SixthExplanation"
+					},
+					{
+						"id": "cf51f4fe-f108-4a29-b0c8-508eaf348534",
+						"name": "FifthExplanation",
+						"nodeType": "Text",
+						"children": [],
+						"parameters": {
+							"font": "Roboto.ttf",
+							"text": "Lay down the iMac and gently lift the \nDisplay from the casing with one hand.\n\nUse the other hand to separate the\nDisplay data cable located at the\nred dot from the casing.\n\nLift the display up from the frame\nand remove it from the iMac.",
+							"layerMode": "overlay",
+							"scale": [
+								0.7218061907283493,
+								0.7218061907283493,
+								0.7218061907283493
+							],
+							"lineScale": 2.232338510109013,
+							"lines": 4.330837144370095,
+							"position": [
+								4,
+								-1,
+								0
+							],
+							"visible": false
+						},
+						"scriptName": "FifthExplanation"
+					},
+					{
+						"id": "4671c771-e165-44c3-9310-5a309fc7cf4b",
+						"name": "harddrive.obj0",
+						"children": [],
+						"parameters": {
+							"type": "52fa4151-55dc-46ff-bde8-36d774b9dfe0",
+							"layerMode": "overlay",
+							"visible": false,
+							"materials": [
+								"94130b1f-030d-41c5-ba33-01b11a209bbc"
+							]
+						},
+						"nodeType": "Object",
+						"scriptName": "harddrive_obj0"
+					},
+					{
+						"id": "2894079e-d7a1-4659-baa7-c24edd08c4c1",
+						"name": "Start Over Button.png0",
+						"children": [],
+						"parameters": {
+							"materials": [
+								"6e823326-26c7-48da-9a9b-e1ba6b8eb92f"
+							],
+							"type": "plane",
+							"layerMode": "overlay",
+							"scale": [
+								2.61,
+								1,
+								1
+							],
+							"visible": false
+						},
+						"nodeType": "Object",
+						"scriptName": "Start_OverButton_png0"
+					}
+				],
+				"parameters": {
+					"source": "34ef2cc8-3b3f-4bf8-838d-2ae78df877a5"
+				},
+				"nodeType": "Target",
+				"scriptName": "iMac_TriggerSierra_pngzpt0"
+			},
+			{
+				"id": "12",
+				"name": "show",
+				"nodeType": "Script",
+				"children": [],
+				"parameters": {
+					"code": "var display_shown = symbol.controllers.display.elements.shown;\nvar display_hidden = symbol.controllers.display.elements.hidden;\n\nparent.on(\"show\", parent_show);\nfunction parent_show() {\n    \n    // Make sure we start from fully hidden\n    display_hidden.reset();\n    \n    // Move to the shown state\n    display_shown.activate();\n\t\n}\n\n"
+				},
+				"scriptName": "show0"
+			},
+			{
+				"id": "13",
+				"name": "hide",
+				"nodeType": "Script",
+				"children": [],
+				"parameters": {
+					"code": "var display_hidden = symbol.controllers.display.elements.hidden;\n\n\nparent.on(\"hide\", parent_hide);\nfunction parent_hide() {\n\t\n\t// Once we're fully hidden we should emit the \"hidden\" signal\n\tdisplay_hidden.one(\"complete\", function() {\n\t    symbol.emit(\"hidden\");\n\t});\n\t\n\tdisplay_hidden.activate();\n}"
+				},
+				"scriptName": "hide"
+			},
+			{
+				"id": "4",
+				"name": "accelerometer",
+				"nodeType": "Accelerometer",
+				"children": [],
+				"parameters": {
+					"landscapeState": "10",
+					"portraitState": "11"
+				},
+				"scriptName": "accelerometer"
+			}
+		],
+		"parameters": {
+			"relativeTo": [
+				"Z.screen"
+			]
+		},
+		"scriptName": "root"
+	},
+	"controllers": [
+		{
+			"id": "mig-2",
+			"name": "display",
+			"default": "8",
+			"elements": [
+				{
+					"id": "8",
+					"name": "shown",
+					"overrides": {
+						"0": {
+							"enabled": {
+								"v": true,
+								"r": 1,
+								"p": 1
+							},
+							"visible": {
+								"v": true,
+								"r": 1
+							},
+							"color": {
+								"v": [
+									1,
+									1,
+									1,
+									1
+								],
+								"r": 0.15
+							}
+						}
+					},
+					"type": "state",
+					"scriptName": "shown"
+				},
+				{
+					"id": "9",
+					"name": "hidden",
+					"overrides": {
+						"0": {
+							"enabled": {
+								"v": false,
+								"r": 1
+							},
+							"visible": {
+								"v": false,
+								"r": 1,
+								"p": 1
+							},
+							"color": {
+								"v": [
+									1,
+									1,
+									1,
+									0
+								],
+								"r": 0.15
+							}
+						}
+					},
+					"type": "state",
+					"scriptName": "hidden"
+				}
+			],
+			"scriptName": "display"
+		},
+		{
+			"id": "mig-5",
+			"name": "orientation",
+			"default": "10",
+			"elements": [
+				{
+					"id": "10",
+					"name": "landscape",
+					"overrides": {},
+					"type": "state",
+					"scriptName": "landscape"
+				},
+				{
+					"id": "11",
+					"name": "portrait",
+					"overrides": {},
+					"type": "state",
+					"scriptName": "portrait"
+				}
+			],
+			"scriptName": "orientation"
+		},
+		{
+			"id": "9eceea00-e2a3-4d92-a54e-a0f3b609f4fb",
+			"name": "openingToolPosition",
+			"elements": [
+				{
+					"id": "f0da0613-703a-4c34-b631-41a1d6d8b497",
+					"name": "Step0",
+					"overrides": {
+						"6d5948e4-7e92-4add-9c12-820d47c54e81": {
+							"position": {
+								"v": [
+									-2.659922999999999,
+									-1.7497589999999992,
+									0
+								],
+								"r": 0.15
+							},
+							"rotation": {
+								"v": [
+									0,
+									0,
+									0
+								],
+								"r": 0.15
+							},
+							"scale": {
+								"v": [
+									0.5975,
+									0.25,
+									0.25
+								],
+								"r": 0.15
+							},
+							"visible": {
+								"v": false,
+								"r": 1
+							}
+						},
+						"7e062883-e2c3-4c7c-a5ff-fc8e41be5636": {
+							"visible": {
+								"v": false,
+								"r": 1
+							}
+						},
+						"3c6783ec-fcef-43ad-b7c0-4b9a987fe658": {
+							"visible": {
+								"v": false,
+								"r": 1
+							}
+						},
+						"f52565a9-269a-48ae-b700-21da30ae0db1": {
+							"position": {
+								"v": [
+									-2.8,
+									-1,
+									0
+								],
+								"r": 0.15
+							},
+							"visible": {
+								"v": false,
+								"r": 1
+							}
+						},
+						"81e11f13-eeac-4486-976a-167f1da8f5a6": {
+							"position": {
+								"v": [
+									-2.8,
+									-1,
+									0
+								],
+								"r": 0.15
+							},
+							"visible": {
+								"v": false,
+								"r": 1
+							}
+						},
+						"2841e4c3-251e-443c-ade3-5ffb162987b4": {},
+						"cf51f4fe-f108-4a29-b0c8-508eaf348534": {
+							"visible": {
+								"v": false,
+								"r": 1
+							}
+						},
+						"61bacad7-6b06-4034-92df-e1692ecc66cb": {
+							"visible": {
+								"v": false,
+								"r": 1
+							},
+							"scale": {
+								"v": [
+									1,
+									1,
+									1
+								],
+								"r": 0.15
+							},
+							"position": {
+								"v": [
+									0,
+									0,
+									0
+								],
+								"r": 0.15
+							},
+							"color": {
+								"v": [
+									1,
+									1,
+									1,
+									1
+								],
+								"r": 0.15
+							},
+							"rotation": {
+								"v": [
+									0,
+									0,
+									0
+								],
+								"r": 0.15
+							}
+						},
+						"e733590c-2e92-43f5-930b-babb20d4dc3e": {
+							"visible": {
+								"v": false,
+								"r": 1
+							}
+						},
+						"da782786-1fa3-4f4a-a4ac-e003318a673a": {
+							"visible": {
+								"v": false,
+								"r": 1
+							},
+							"scale": {
+								"v": [
+									0.3,
+									0.3,
+									0.3
+								],
+								"r": 0.15
+							},
+							"position": {
+								"v": [
+									0,
+									0,
+									0
+								],
+								"r": 0.15
+							}
+						},
+						"215e4c8a-181f-4943-b467-33c1c3b55a2f": {
+							"visible": {
+								"v": false,
+								"r": 1
+							},
+							"position": {
+								"v": [
+									4,
+									-1,
+									0
+								],
+								"r": 0.15
+							},
+							"text": {
+								"v": "Remove two 10.0 mm T10 screws\nlocated on the left speaker",
+								"r": 1
+							},
+							"hAlign": {
+								"v": "left",
+								"r": 1
+							}
+						},
+						"f9c695fb-092b-44af-a04c-f1b1065ec196": {
+							"visible": {
+								"v": false,
+								"r": 1
+							},
+							"scale": {
+								"v": [
+									0.3,
+									0.3,
+									0.3
+								],
+								"r": 0.15
+							},
+							"position": {
+								"v": [
+									0,
+									0,
+									0
+								],
+								"r": 0.15
+							}
+						},
+						"4671c771-e165-44c3-9310-5a309fc7cf4b": {
+							"visible": {
+								"v": false,
+								"r": 1
+							},
+							"position": {
+								"v": [
+									0,
+									0,
+									0
+								],
+								"r": 0.15
+							},
+							"scale": {
+								"v": [
+									1,
+									1,
+									1
+								],
+								"r": 0.15
+							},
+							"rotation": {
+								"v": [
+									0,
+									0,
+									0
+								],
+								"r": 0.15
+							}
+						},
+						"1d0be1f6-5265-447f-8a72-a4fa2c74e39c": {
+							"visible": {
+								"v": false,
+								"r": 1
+							},
+							"position": {
+								"v": [
+									0,
+									0,
+									0
+								],
+								"r": 0.15
+							},
+							"scale": {
+								"v": [
+									1,
+									1,
+									1
+								],
+								"r": 0.15
+							}
+						},
+						"2894079e-d7a1-4659-baa7-c24edd08c4c1": {
+							"visible": {
+								"v": false,
+								"r": 1
+							},
+							"position": {
+								"v": [
+									0,
+									0,
+									0
+								],
+								"r": 0.15
+							},
+							"scale": {
+								"v": [
+									2.61,
+									1,
+									1
+								],
+								"r": 0.15
+							}
+						}
+					},
+					"type": "state",
+					"scriptName": "Step0"
+				},
+				{
+					"id": "e9ba0644-bd29-468c-be53-7f2a1c2a5f2d",
+					"name": "Step1",
+					"overrides": {
+						"6d5948e4-7e92-4add-9c12-820d47c54e81": {
+							"position": {
+								"v": [
+									-2.659922999999999,
+									-1.7497589999999992,
+									0
+								],
+								"r": 0.15
+							},
+							"rotation": {
+								"v": [
+									0,
+									0,
+									0
+								],
+								"r": 0.15
+							},
+							"scale": {
+								"v": [
+									0.5975,
+									0.25,
+									0.25
+								],
+								"r": 0.15
+							},
+							"visible": {
+								"v": true,
+								"r": 1
+							}
+						},
+						"7e062883-e2c3-4c7c-a5ff-fc8e41be5636": {
+							"visible": {
+								"v": false,
+								"r": 1
+							}
+						},
+						"3c6783ec-fcef-43ad-b7c0-4b9a987fe658": {
+							"visible": {
+								"v": true,
+								"r": 1
+							}
+						},
+						"f52565a9-269a-48ae-b700-21da30ae0db1": {
+							"position": {
+								"v": [
+									-2.8,
+									-1,
+									0
+								],
+								"r": 0.15
+							},
+							"visible": {
+								"v": false,
+								"r": 1
+							}
+						},
+						"81e11f13-eeac-4486-976a-167f1da8f5a6": {
+							"position": {
+								"v": [
+									-2.8,
+									-1,
+									0
+								],
+								"r": 0.15
+							},
+							"visible": {
+								"v": false,
+								"r": 1
+							}
+						},
+						"2841e4c3-251e-443c-ade3-5ffb162987b4": {},
+						"cf51f4fe-f108-4a29-b0c8-508eaf348534": {
+							"visible": {
+								"v": false,
+								"r": 1
+							}
+						},
+						"61bacad7-6b06-4034-92df-e1692ecc66cb": {
+							"visible": {
+								"v": false,
+								"r": 1
+							},
+							"scale": {
+								"v": [
+									1,
+									1,
+									1
+								],
+								"r": 0.15
+							},
+							"position": {
+								"v": [
+									0,
+									0,
+									0
+								],
+								"r": 0.15
+							},
+							"color": {
+								"v": [
+									1,
+									1,
+									1,
+									1
+								],
+								"r": 0.15
+							},
+							"rotation": {
+								"v": [
+									0,
+									0,
+									0
+								],
+								"r": 0.15
+							}
+						},
+						"e733590c-2e92-43f5-930b-babb20d4dc3e": {
+							"visible": {
+								"v": false,
+								"r": 1
+							}
+						},
+						"da782786-1fa3-4f4a-a4ac-e003318a673a": {
+							"visible": {
+								"v": false,
+								"r": 1
+							},
+							"scale": {
+								"v": [
+									0.3,
+									0.3,
+									0.3
+								],
+								"r": 0.15
+							},
+							"position": {
+								"v": [
+									0,
+									0,
+									0
+								],
+								"r": 0.15
+							}
+						},
+						"215e4c8a-181f-4943-b467-33c1c3b55a2f": {
+							"visible": {
+								"v": false,
+								"r": 1
+							},
+							"position": {
+								"v": [
+									4,
+									-1,
+									0
+								],
+								"r": 0.15
+							},
+							"text": {
+								"v": "Remove two 10.0 mm T10 screws\nlocated on the left speaker",
+								"r": 1
+							},
+							"hAlign": {
+								"v": "left",
+								"r": 1
+							}
+						},
+						"f9c695fb-092b-44af-a04c-f1b1065ec196": {
+							"visible": {
+								"v": false,
+								"r": 1
+							},
+							"scale": {
+								"v": [
+									0.3,
+									0.3,
+									0.3
+								],
+								"r": 0.15
+							},
+							"position": {
+								"v": [
+									0,
+									0,
+									0
+								],
+								"r": 0.15
+							}
+						},
+						"4671c771-e165-44c3-9310-5a309fc7cf4b": {
+							"visible": {
+								"v": false,
+								"r": 1
+							},
+							"position": {
+								"v": [
+									0,
+									0,
+									0
+								],
+								"r": 0.15
+							},
+							"scale": {
+								"v": [
+									1,
+									1,
+									1
+								],
+								"r": 0.15
+							},
+							"rotation": {
+								"v": [
+									0,
+									0,
+									0
+								],
+								"r": 0.15
+							}
+						},
+						"1d0be1f6-5265-447f-8a72-a4fa2c74e39c": {
+							"visible": {
+								"v": true,
+								"r": 1
+							},
+							"position": {
+								"v": [
+									-2.7871180000000026,
+									-0.9523459999999988,
+									0
+								],
+								"r": 0.15
+							},
+							"scale": {
+								"v": [
+									0.8,
+									0.4,
+									1
+								],
+								"r": 0.15
+							}
+						},
+						"2894079e-d7a1-4659-baa7-c24edd08c4c1": {
+							"visible": {
+								"v": false,
+								"r": 1
+							},
+							"position": {
+								"v": [
+									0,
+									0,
+									0
+								],
+								"r": 0.15
+							},
+							"scale": {
+								"v": [
+									2.61,
+									1,
+									1
+								],
+								"r": 0.15
+							}
+						}
+					},
+					"type": "state",
+					"scriptName": "Step1"
+				},
+				{
+					"id": "1e05cebe-e5a2-4e67-8930-85619d5059cc",
+					"name": "Step2",
+					"overrides": {
+						"6d5948e4-7e92-4add-9c12-820d47c54e81": {
+							"position": {
+								"v": [
+									-2.659922999999999,
+									1.0698869999999978,
+									0
+								],
+								"r": 0.15
+							},
+							"rotation": {
+								"v": [
+									0,
+									0,
+									0
+								],
+								"r": 0.15
+							},
+							"scale": {
+								"v": [
+									0.5975,
+									0.25,
+									0.25
+								],
+								"r": 0.15
+							},
+							"visible": {
+								"v": true,
+								"r": 1
+							}
+						},
+						"7e062883-e2c3-4c7c-a5ff-fc8e41be5636": {
+							"visible": {
+								"v": true,
+								"r": 1
+							}
+						},
+						"3c6783ec-fcef-43ad-b7c0-4b9a987fe658": {
+							"visible": {
+								"v": false,
+								"r": 1
+							}
+						},
+						"f52565a9-269a-48ae-b700-21da30ae0db1": {
+							"position": {
+								"v": [
+									0.6812950000000031,
+									1.4492140000000018,
+									0
+								],
+								"r": 0.15
+							},
+							"visible": {
+								"v": false,
+								"r": 1
+							}
+						},
+						"81e11f13-eeac-4486-976a-167f1da8f5a6": {
+							"position": {
+								"v": [
+									-2.8,
+									-1,
+									0
+								],
+								"r": 0.15
+							},
+							"visible": {
+								"v": false,
+								"r": 1
+							}
+						},
+						"2841e4c3-251e-443c-ade3-5ffb162987b4": {},
+						"cf51f4fe-f108-4a29-b0c8-508eaf348534": {
+							"visible": {
+								"v": false,
+								"r": 1
+							}
+						},
+						"61bacad7-6b06-4034-92df-e1692ecc66cb": {
+							"visible": {
+								"v": false,
+								"r": 1
+							},
+							"scale": {
+								"v": [
+									1,
+									1,
+									1
+								],
+								"r": 0.15
+							},
+							"position": {
+								"v": [
+									0,
+									0,
+									0
+								],
+								"r": 0.15
+							},
+							"color": {
+								"v": [
+									1,
+									1,
+									1,
+									1
+								],
+								"r": 0.15
+							},
+							"rotation": {
+								"v": [
+									0,
+									0,
+									0
+								],
+								"r": 0.15
+							}
+						},
+						"e733590c-2e92-43f5-930b-babb20d4dc3e": {
+							"visible": {
+								"v": false,
+								"r": 1
+							}
+						},
+						"da782786-1fa3-4f4a-a4ac-e003318a673a": {
+							"visible": {
+								"v": false,
+								"r": 1
+							},
+							"scale": {
+								"v": [
+									0.3,
+									0.3,
+									0.3
+								],
+								"r": 0.15
+							},
+							"position": {
+								"v": [
+									0,
+									0,
+									0
+								],
+								"r": 0.15
+							}
+						},
+						"215e4c8a-181f-4943-b467-33c1c3b55a2f": {
+							"visible": {
+								"v": false,
+								"r": 1
+							},
+							"position": {
+								"v": [
+									4,
+									-1,
+									0
+								],
+								"r": 0.15
+							},
+							"text": {
+								"v": "Remove two 10.0 mm T10 screws\nlocated on the left speaker",
+								"r": 1
+							},
+							"hAlign": {
+								"v": "left",
+								"r": 1
+							}
+						},
+						"f9c695fb-092b-44af-a04c-f1b1065ec196": {
+							"visible": {
+								"v": false,
+								"r": 1
+							},
+							"scale": {
+								"v": [
+									0.3,
+									0.3,
+									0.3
+								],
+								"r": 0.15
+							},
+							"position": {
+								"v": [
+									0,
+									0,
+									0
+								],
+								"r": 0.15
+							}
+						},
+						"4671c771-e165-44c3-9310-5a309fc7cf4b": {
+							"visible": {
+								"v": false,
+								"r": 1
+							},
+							"position": {
+								"v": [
+									0,
+									0,
+									0
+								],
+								"r": 0.15
+							},
+							"scale": {
+								"v": [
+									1,
+									1,
+									1
+								],
+								"r": 0.15
+							},
+							"rotation": {
+								"v": [
+									0,
+									0,
+									0
+								],
+								"r": 0.15
+							}
+						},
+						"1d0be1f6-5265-447f-8a72-a4fa2c74e39c": {
+							"visible": {
+								"v": true,
+								"r": 1
+							},
+							"position": {
+								"v": [
+									-2.77241,
+									1.6590860000000132,
+									0
+								],
+								"r": 0.15
+							},
+							"scale": {
+								"v": [
+									0.8,
+									0.3,
+									1
+								],
+								"r": 0.15
+							}
+						},
+						"2894079e-d7a1-4659-baa7-c24edd08c4c1": {
+							"visible": {
+								"v": false,
+								"r": 1
+							},
+							"position": {
+								"v": [
+									0,
+									0,
+									0
+								],
+								"r": 0.15
+							},
+							"scale": {
+								"v": [
+									2.61,
+									1,
+									1
+								],
+								"r": 0.15
+							}
+						}
+					},
+					"type": "state",
+					"scriptName": "Step2"
+				},
+				{
+					"id": "6ad82543-d2b2-4eca-8c79-9e1eb68ff5da",
+					"name": "Step3",
+					"overrides": {
+						"6d5948e4-7e92-4add-9c12-820d47c54e81": {
+							"position": {
+								"v": [
+									1.6605299999999996,
+									1.8761050000000006,
+									0
+								],
+								"r": 0.15
+							},
+							"rotation": {
+								"v": [
+									0,
+									0,
+									-90
+								],
+								"r": 0.15
+							},
+							"scale": {
+								"v": [
+									0.5975,
+									0.25,
+									0.25
+								],
+								"r": 0.15
+							},
+							"visible": {
+								"v": true,
+								"r": 1
+							}
+						},
+						"7e062883-e2c3-4c7c-a5ff-fc8e41be5636": {
+							"visible": {
+								"v": false,
+								"r": 1
+							}
+						},
+						"3c6783ec-fcef-43ad-b7c0-4b9a987fe658": {
+							"visible": {
+								"v": false,
+								"r": 1
+							}
+						},
+						"f52565a9-269a-48ae-b700-21da30ae0db1": {
+							"position": {
+								"v": [
+									0.6812950000000031,
+									1.4492140000000018,
+									0
+								],
+								"r": 0.15
+							},
+							"visible": {
+								"v": true,
+								"r": 1
+							}
+						},
+						"81e11f13-eeac-4486-976a-167f1da8f5a6": {
+							"position": {
+								"v": [
+									0.6812950000000031,
+									1.4492140000000018,
+									0
+								],
+								"r": 0.15
+							},
+							"visible": {
+								"v": false,
+								"r": 1
+							}
+						},
+						"2841e4c3-251e-443c-ade3-5ffb162987b4": {},
+						"cf51f4fe-f108-4a29-b0c8-508eaf348534": {
+							"visible": {
+								"v": false,
+								"r": 1
+							}
+						},
+						"61bacad7-6b06-4034-92df-e1692ecc66cb": {
+							"visible": {
+								"v": false,
+								"r": 1
+							},
+							"scale": {
+								"v": [
+									1,
+									1,
+									1
+								],
+								"r": 0.15
+							},
+							"position": {
+								"v": [
+									0,
+									0,
+									0
+								],
+								"r": 0.15
+							},
+							"color": {
+								"v": [
+									1,
+									1,
+									1,
+									1
+								],
+								"r": 0.15
+							},
+							"rotation": {
+								"v": [
+									0,
+									0,
+									0
+								],
+								"r": 0.15
+							}
+						},
+						"e733590c-2e92-43f5-930b-babb20d4dc3e": {
+							"visible": {
+								"v": false,
+								"r": 1
+							}
+						},
+						"da782786-1fa3-4f4a-a4ac-e003318a673a": {
+							"visible": {
+								"v": false,
+								"r": 1
+							},
+							"scale": {
+								"v": [
+									0.3,
+									0.3,
+									0.3
+								],
+								"r": 0.15
+							},
+							"position": {
+								"v": [
+									0,
+									0,
+									0
+								],
+								"r": 0.15
+							}
+						},
+						"215e4c8a-181f-4943-b467-33c1c3b55a2f": {
+							"visible": {
+								"v": false,
+								"r": 1
+							},
+							"position": {
+								"v": [
+									4,
+									-1,
+									0
+								],
+								"r": 0.15
+							},
+							"text": {
+								"v": "Remove two 10.0 mm T10 screws\nlocated on the left speaker",
+								"r": 1
+							},
+							"hAlign": {
+								"v": "left",
+								"r": 1
+							}
+						},
+						"f9c695fb-092b-44af-a04c-f1b1065ec196": {
+							"visible": {
+								"v": false,
+								"r": 1
+							},
+							"scale": {
+								"v": [
+									0.3,
+									0.3,
+									0.3
+								],
+								"r": 0.15
+							},
+							"position": {
+								"v": [
+									0,
+									0,
+									0
+								],
+								"r": 0.15
+							}
+						},
+						"4671c771-e165-44c3-9310-5a309fc7cf4b": {
+							"visible": {
+								"v": false,
+								"r": 1
+							},
+							"position": {
+								"v": [
+									0,
+									0,
+									0
+								],
+								"r": 0.15
+							},
+							"scale": {
+								"v": [
+									1,
+									1,
+									1
+								],
+								"r": 0.15
+							},
+							"rotation": {
+								"v": [
+									0,
+									0,
+									0
+								],
+								"r": 0.15
+							}
+						},
+						"1d0be1f6-5265-447f-8a72-a4fa2c74e39c": {
+							"visible": {
+								"v": true,
+								"r": 1
+							},
+							"position": {
+								"v": [
+									0.6713020000000104,
+									1.5619549999999975,
+									0
+								],
+								"r": 0.15
+							},
+							"scale": {
+								"v": [
+									0.8,
+									0.3,
+									1
+								],
+								"r": 0.15
+							}
+						},
+						"2894079e-d7a1-4659-baa7-c24edd08c4c1": {
+							"visible": {
+								"v": false,
+								"r": 1
+							},
+							"position": {
+								"v": [
+									0,
+									0,
+									0
+								],
+								"r": 0.15
+							},
+							"scale": {
+								"v": [
+									2.61,
+									1,
+									1
+								],
+								"r": 0.15
+							}
+						}
+					},
+					"type": "state",
+					"scriptName": "Step3"
+				},
+				{
+					"id": "ea4ee5a4-67f2-47fa-b035-2d8b6d55cfde",
+					"name": "Step4",
+					"overrides": {
+						"6d5948e4-7e92-4add-9c12-820d47c54e81": {
+							"position": {
+								"v": [
+									2.9149699999999994,
+									-1.342818000000002,
+									0
+								],
+								"r": 0.15
+							},
+							"rotation": {
+								"v": [
+									0,
+									0,
+									180
+								],
+								"r": 0.15
+							},
+							"scale": {
+								"v": [
+									0.5975,
+									0.25,
+									0.25
+								],
+								"r": 0.15
+							},
+							"visible": {
+								"v": true,
+								"r": 1
+							}
+						},
+						"7e062883-e2c3-4c7c-a5ff-fc8e41be5636": {
+							"visible": {
+								"v": false,
+								"r": 1
+							}
+						},
+						"3c6783ec-fcef-43ad-b7c0-4b9a987fe658": {
+							"visible": {
+								"v": false,
+								"r": 1
+							}
+						},
+						"f52565a9-269a-48ae-b700-21da30ae0db1": {
+							"position": {
+								"v": [
+									-2.8,
+									-1,
+									0
+								],
+								"r": 0.15
+							},
+							"visible": {
+								"v": false,
+								"r": 1
+							}
+						},
+						"81e11f13-eeac-4486-976a-167f1da8f5a6": {
+							"position": {
+								"v": [
+									3.5380640000000008,
+									-1.978116000000001,
+									0
+								],
+								"r": 0.15
+							},
+							"visible": {
+								"v": true,
+								"r": 1
+							}
+						},
+						"2841e4c3-251e-443c-ade3-5ffb162987b4": {},
+						"cf51f4fe-f108-4a29-b0c8-508eaf348534": {
+							"visible": {
+								"v": false,
+								"r": 1
+							}
+						},
+						"61bacad7-6b06-4034-92df-e1692ecc66cb": {
+							"visible": {
+								"v": false,
+								"r": 1
+							},
+							"scale": {
+								"v": [
+									1,
+									1,
+									1
+								],
+								"r": 0.15
+							},
+							"position": {
+								"v": [
+									0,
+									0,
+									0
+								],
+								"r": 0.15
+							},
+							"color": {
+								"v": [
+									1,
+									1,
+									1,
+									1
+								],
+								"r": 0.15
+							},
+							"rotation": {
+								"v": [
+									0,
+									0,
+									0
+								],
+								"r": 0.15
+							}
+						},
+						"e733590c-2e92-43f5-930b-babb20d4dc3e": {
+							"visible": {
+								"v": false,
+								"r": 1
+							}
+						},
+						"da782786-1fa3-4f4a-a4ac-e003318a673a": {
+							"visible": {
+								"v": false,
+								"r": 1
+							},
+							"scale": {
+								"v": [
+									0.3,
+									0.3,
+									0.3
+								],
+								"r": 0.15
+							},
+							"position": {
+								"v": [
+									0,
+									0,
+									0
+								],
+								"r": 0.15
+							}
+						},
+						"215e4c8a-181f-4943-b467-33c1c3b55a2f": {
+							"visible": {
+								"v": false,
+								"r": 1
+							},
+							"position": {
+								"v": [
+									4,
+									-1,
+									0
+								],
+								"r": 0.15
+							},
+							"text": {
+								"v": "Remove two 10.0 mm T10 screws\nlocated on the left speaker",
+								"r": 1
+							},
+							"hAlign": {
+								"v": "left",
+								"r": 1
+							}
+						},
+						"f9c695fb-092b-44af-a04c-f1b1065ec196": {
+							"visible": {
+								"v": false,
+								"r": 1
+							},
+							"scale": {
+								"v": [
+									0.3,
+									0.3,
+									0.3
+								],
+								"r": 0.15
+							},
+							"position": {
+								"v": [
+									0,
+									0,
+									0
+								],
+								"r": 0.15
+							}
+						},
+						"4671c771-e165-44c3-9310-5a309fc7cf4b": {
+							"visible": {
+								"v": false,
+								"r": 1
+							},
+							"position": {
+								"v": [
+									0,
+									0,
+									0
+								],
+								"r": 0.15
+							},
+							"scale": {
+								"v": [
+									1,
+									1,
+									1
+								],
+								"r": 0.15
+							},
+							"rotation": {
+								"v": [
+									0,
+									0,
+									0
+								],
+								"r": 0.15
+							}
+						},
+						"1d0be1f6-5265-447f-8a72-a4fa2c74e39c": {
+							"visible": {
+								"v": true,
+								"r": 1
+							},
+							"position": {
+								"v": [
+									3.4862369999999925,
+									-1.9991089999999978,
+									0
+								],
+								"r": 0.15
+							},
+							"scale": {
+								"v": [
+									0.7,
+									0.5,
+									1
+								],
+								"r": 0.15
+							}
+						},
+						"2894079e-d7a1-4659-baa7-c24edd08c4c1": {
+							"visible": {
+								"v": false,
+								"r": 1
+							},
+							"position": {
+								"v": [
+									0,
+									0,
+									0
+								],
+								"r": 0.15
+							},
+							"scale": {
+								"v": [
+									2.61,
+									1,
+									1
+								],
+								"r": 0.15
+							}
+						}
+					},
+					"type": "state",
+					"scriptName": "Step4"
+				},
+				{
+					"id": "28b929f4-de8d-47b4-aa7a-ea1d79fc71f9",
+					"name": "Step5",
+					"overrides": {
+						"6d5948e4-7e92-4add-9c12-820d47c54e81": {
+							"position": {
+								"v": [
+									-2.659922999999999,
+									-1.7497589999999992,
+									0
+								],
+								"r": 0.15
+							},
+							"rotation": {
+								"v": [
+									0,
+									0,
+									0
+								],
+								"r": 0.15
+							},
+							"scale": {
+								"v": [
+									0.5975,
+									0.25,
+									0.25
+								],
+								"r": 0.15
+							},
+							"visible": {
+								"v": false,
+								"r": 1
+							}
+						},
+						"7e062883-e2c3-4c7c-a5ff-fc8e41be5636": {
+							"visible": {
+								"v": false,
+								"r": 1
+							}
+						},
+						"3c6783ec-fcef-43ad-b7c0-4b9a987fe658": {
+							"visible": {
+								"v": false,
+								"r": 1
+							}
+						},
+						"f52565a9-269a-48ae-b700-21da30ae0db1": {
+							"position": {
+								"v": [
+									-2.8,
+									-1,
+									0
+								],
+								"r": 0.15
+							},
+							"visible": {
+								"v": false,
+								"r": 1
+							}
+						},
+						"81e11f13-eeac-4486-976a-167f1da8f5a6": {
+							"position": {
+								"v": [
+									-2.8,
+									-1,
+									0
+								],
+								"r": 0.15
+							},
+							"visible": {
+								"v": false,
+								"r": 1
+							}
+						},
+						"cf51f4fe-f108-4a29-b0c8-508eaf348534": {
+							"visible": {
+								"v": true,
+								"r": 1
+							}
+						},
+						"61bacad7-6b06-4034-92df-e1692ecc66cb": {
+							"visible": {
+								"v": true,
+								"r": 1
+							},
+							"scale": {
+								"v": [
+									0.3,
+									0.3,
+									0.3
+								],
+								"r": 0.15
+							},
+							"position": {
+								"v": [
+									1.1182239999999997,
+									-0.06214499999999994,
+									0
+								],
+								"r": 0.15
+							},
+							"color": {
+								"v": [
+									1,
+									1,
+									1,
+									1
+								],
+								"r": 0.15
+							},
+							"rotation": {
+								"v": [
+									0,
+									0,
+									0
+								],
+								"r": 0.15
+							}
+						},
+						"e733590c-2e92-43f5-930b-babb20d4dc3e": {
+							"visible": {
+								"v": true,
+								"r": 1
+							}
+						},
+						"da782786-1fa3-4f4a-a4ac-e003318a673a": {
+							"visible": {
+								"v": false,
+								"r": 1
+							},
+							"scale": {
+								"v": [
+									0.3,
+									0.3,
+									0.3
+								],
+								"r": 0.15
+							},
+							"position": {
+								"v": [
+									0,
+									0,
+									0
+								],
+								"r": 0.15
+							}
+						},
+						"215e4c8a-181f-4943-b467-33c1c3b55a2f": {
+							"visible": {
+								"v": false,
+								"r": 1
+							},
+							"position": {
+								"v": [
+									4,
+									-1,
+									0
+								],
+								"r": 0.15
+							},
+							"text": {
+								"v": "Remove two 10.0 mm T10 screws\nlocated on the left speaker",
+								"r": 1
+							},
+							"hAlign": {
+								"v": "left",
+								"r": 1
+							}
+						},
+						"f9c695fb-092b-44af-a04c-f1b1065ec196": {
+							"visible": {
+								"v": false,
+								"r": 1
+							},
+							"scale": {
+								"v": [
+									0.3,
+									0.3,
+									0.3
+								],
+								"r": 0.15
+							},
+							"position": {
+								"v": [
+									0,
+									0,
+									0
+								],
+								"r": 0.15
+							}
+						},
+						"4671c771-e165-44c3-9310-5a309fc7cf4b": {
+							"visible": {
+								"v": false,
+								"r": 1
+							},
+							"position": {
+								"v": [
+									0,
+									0,
+									0
+								],
+								"r": 0.15
+							},
+							"scale": {
+								"v": [
+									1,
+									1,
+									1
+								],
+								"r": 0.15
+							},
+							"rotation": {
+								"v": [
+									0,
+									0,
+									0
+								],
+								"r": 0.15
+							}
+						},
+						"1d0be1f6-5265-447f-8a72-a4fa2c74e39c": {
+							"visible": {
+								"v": true,
+								"r": 1
+							},
+							"position": {
+								"v": [
+									3.6766149999999884,
+									-0.9705579999999963,
+									0
+								],
+								"r": 0.15
+							},
+							"scale": {
+								"v": [
+									1.5,
+									1,
+									1
+								],
+								"r": 0.15
+							}
+						},
+						"2894079e-d7a1-4659-baa7-c24edd08c4c1": {
+							"visible": {
+								"v": false,
+								"r": 1
+							},
+							"position": {
+								"v": [
+									0,
+									0,
+									0
+								],
+								"r": 0.15
+							},
+							"scale": {
+								"v": [
+									2.61,
+									1,
+									1
+								],
+								"r": 0.15
+							}
+						}
+					},
+					"type": "state",
+					"scriptName": "Step5"
+				},
+				{
+					"id": "e7018b34-2fe6-4482-a08e-90e491bda5d5",
+					"name": "Step6",
+					"overrides": {
+						"6d5948e4-7e92-4add-9c12-820d47c54e81": {
+							"position": {
+								"v": [
+									-2.659922999999999,
+									-1.7497589999999992,
+									0
+								],
+								"r": 0.15
+							},
+							"rotation": {
+								"v": [
+									0,
+									0,
+									0
+								],
+								"r": 0.15
+							},
+							"scale": {
+								"v": [
+									0.5975,
+									0.25,
+									0.25
+								],
+								"r": 0.15
+							},
+							"visible": {
+								"v": false,
+								"r": 1
+							}
+						},
+						"7e062883-e2c3-4c7c-a5ff-fc8e41be5636": {
+							"visible": {
+								"v": false,
+								"r": 1
+							}
+						},
+						"3c6783ec-fcef-43ad-b7c0-4b9a987fe658": {
+							"visible": {
+								"v": false,
+								"r": 1
+							}
+						},
+						"f52565a9-269a-48ae-b700-21da30ae0db1": {
+							"position": {
+								"v": [
+									-2.8,
+									-1,
+									0
+								],
+								"r": 0.15
+							},
+							"visible": {
+								"v": false,
+								"r": 1
+							}
+						},
+						"81e11f13-eeac-4486-976a-167f1da8f5a6": {
+							"position": {
+								"v": [
+									-2.8,
+									-1,
+									0
+								],
+								"r": 0.15
+							},
+							"visible": {
+								"v": false,
+								"r": 1
+							}
+						},
+						"cf51f4fe-f108-4a29-b0c8-508eaf348534": {
+							"visible": {
+								"v": false,
+								"r": 1
+							}
+						},
+						"61bacad7-6b06-4034-92df-e1692ecc66cb": {
+							"visible": {
+								"v": true,
+								"r": 1
+							},
+							"scale": {
+								"v": [
+									0.2,
+									0.2,
+									0.2
+								],
+								"r": 0.15
+							},
+							"position": {
+								"v": [
+									-1.5764279999999966,
+									-0.5625310000000012,
+									0
+								],
+								"r": 0.15
+							},
+							"color": {
+								"v": [
+									1,
+									1,
+									1,
+									1
+								],
+								"r": 0.15
+							},
+							"rotation": {
+								"v": [
+									0,
+									0,
+									0
+								],
+								"r": 0.15
+							}
+						},
+						"e733590c-2e92-43f5-930b-babb20d4dc3e": {
+							"visible": {
+								"v": true,
+								"r": 1
+							}
+						},
+						"da782786-1fa3-4f4a-a4ac-e003318a673a": {
+							"visible": {
+								"v": true,
+								"r": 1
+							},
+							"scale": {
+								"v": [
+									0.2,
+									0.2,
+									0.2
+								],
+								"r": 0.15
+							},
+							"position": {
+								"v": [
+									-1.2731479999999982,
+									0.5826330000000044,
+									0
+								],
+								"r": 0.15
+							}
+						},
+						"215e4c8a-181f-4943-b467-33c1c3b55a2f": {
+							"visible": {
+								"v": true,
+								"r": 1
+							},
+							"position": {
+								"v": [
+									-3.550780300000001,
+									-0.3286430000000019,
+									0
+								],
+								"r": 0.15
+							},
+							"text": {
+								"v": "Remove two 10.0 mm T10 screws\nlocated on the left speaker\n\nThen, detach the speaker\ncable from the mainboard\nand move the speaker\nslightly to the left until you\ncan reach the hard drive\nmounting screws.",
+								"r": 1
+							},
+							"hAlign": {
+								"v": "left",
+								"r": 1
+							}
+						},
+						"f9c695fb-092b-44af-a04c-f1b1065ec196": {
+							"visible": {
+								"v": true,
+								"r": 1
+							},
+							"scale": {
+								"v": [
+									0.2,
+									0.2,
+									0.2
+								],
+								"r": 0.15
+							},
+							"position": {
+								"v": [
+									-0.3293089999999964,
+									-0.08035999999999507,
+									0
+								],
+								"r": 0.15
+							}
+						},
+						"4671c771-e165-44c3-9310-5a309fc7cf4b": {
+							"visible": {
+								"v": false,
+								"r": 1
+							},
+							"position": {
+								"v": [
+									0,
+									0,
+									0
+								],
+								"r": 0.15
+							},
+							"scale": {
+								"v": [
+									1,
+									1,
+									1
+								],
+								"r": 0.15
+							},
+							"rotation": {
+								"v": [
+									0,
+									0,
+									0
+								],
+								"r": 0.15
+							}
+						},
+						"1d0be1f6-5265-447f-8a72-a4fa2c74e39c": {
+							"visible": {
+								"v": true,
+								"r": 1
+							},
+							"position": {
+								"v": [
+									-3.6745890000000085,
+									-0.3197809999999981,
+									0
+								],
+								"r": 0.15
+							},
+							"scale": {
+								"v": [
+									1.7,
+									1.2,
+									1
+								],
+								"r": 0.15
+							}
+						},
+						"2894079e-d7a1-4659-baa7-c24edd08c4c1": {
+							"visible": {
+								"v": false,
+								"r": 1
+							},
+							"position": {
+								"v": [
+									0,
+									0,
+									0
+								],
+								"r": 0.15
+							},
+							"scale": {
+								"v": [
+									2.61,
+									1,
+									1
+								],
+								"r": 0.15
+							}
+						}
+					},
+					"type": "state",
+					"scriptName": "Step6"
+				},
+				{
+					"id": "cba15104-b675-4e18-86f3-639b4e15fde1",
+					"name": "Step7",
+					"overrides": {
+						"6d5948e4-7e92-4add-9c12-820d47c54e81": {
+							"position": {
+								"v": [
+									-2.659922999999999,
+									-1.7497589999999992,
+									0
+								],
+								"r": 0.15
+							},
+							"rotation": {
+								"v": [
+									0,
+									0,
+									0
+								],
+								"r": 0.15
+							},
+							"scale": {
+								"v": [
+									0.5975,
+									0.25,
+									0.25
+								],
+								"r": 0.15
+							},
+							"visible": {
+								"v": false,
+								"r": 1
+							}
+						},
+						"7e062883-e2c3-4c7c-a5ff-fc8e41be5636": {
+							"visible": {
+								"v": false,
+								"r": 1
+							}
+						},
+						"3c6783ec-fcef-43ad-b7c0-4b9a987fe658": {
+							"visible": {
+								"v": false,
+								"r": 1
+							}
+						},
+						"f52565a9-269a-48ae-b700-21da30ae0db1": {
+							"position": {
+								"v": [
+									-2.8,
+									-1,
+									0
+								],
+								"r": 0.15
+							},
+							"visible": {
+								"v": false,
+								"r": 1
+							}
+						},
+						"81e11f13-eeac-4486-976a-167f1da8f5a6": {
+							"position": {
+								"v": [
+									-2.8,
+									-1,
+									0
+								],
+								"r": 0.15
+							},
+							"visible": {
+								"v": false,
+								"r": 1
+							}
+						},
+						"cf51f4fe-f108-4a29-b0c8-508eaf348534": {
+							"visible": {
+								"v": false,
+								"r": 1
+							}
+						},
+						"61bacad7-6b06-4034-92df-e1692ecc66cb": {
+							"visible": {
+								"v": true,
+								"r": 1
+							},
+							"scale": {
+								"v": [
+									0.2,
+									0.2,
+									0.2
+								],
+								"r": 0.15
+							},
+							"position": {
+								"v": [
+									-0.5979779999999965,
+									0.47671899999999995,
+									0
+								],
+								"r": 0.15
+							},
+							"color": {
+								"v": [
+									1,
+									1,
+									1,
+									1
+								],
+								"r": 0.15
+							},
+							"rotation": {
+								"v": [
+									0,
+									0,
+									0
+								],
+								"r": 0.15
+							}
+						},
+						"e733590c-2e92-43f5-930b-babb20d4dc3e": {
+							"visible": {
+								"v": true,
+								"r": 1
+							}
+						},
+						"da782786-1fa3-4f4a-a4ac-e003318a673a": {
+							"visible": {
+								"v": true,
+								"r": 1
+							},
+							"scale": {
+								"v": [
+									0.2,
+									0.2,
+									0.2
+								],
+								"r": 0.15
+							},
+							"position": {
+								"v": [
+									-1.0931829999999985,
+									0.2710739999999995,
+									0
+								],
+								"r": 0.15
+							}
+						},
+						"215e4c8a-181f-4943-b467-33c1c3b55a2f": {
+							"visible": {
+								"v": true,
+								"r": 1
+							},
+							"position": {
+								"v": [
+									-0.8399559000000003,
+									2.234196000000006,
+									0
+								],
+								"r": 0.15
+							},
+							"text": {
+								"v": "Pull straight up on the SATA\ndata/power cable to disconnect\nit from the drive.\n\nAfter that remove two 7.3 mm\nT10 screws securing the left\nhard drive bracket to the\nrear case.",
+								"r": 1
+							},
+							"hAlign": {
+								"v": "left",
+								"r": 1
+							}
+						},
+						"f9c695fb-092b-44af-a04c-f1b1065ec196": {
+							"visible": {
+								"v": true,
+								"r": 1
+							},
+							"scale": {
+								"v": [
+									0.2,
+									0.2,
+									0.2
+								],
+								"r": 0.15
+							},
+							"position": {
+								"v": [
+									-1.0931829999999985,
+									-0.36456499999999975,
+									0
+								],
+								"r": 0.15
+							}
+						},
+						"4671c771-e165-44c3-9310-5a309fc7cf4b": {
+							"visible": {
+								"v": false,
+								"r": 1
+							},
+							"position": {
+								"v": [
+									0,
+									0,
+									0
+								],
+								"r": 0.15
+							},
+							"scale": {
+								"v": [
+									1,
+									1,
+									1
+								],
+								"r": 0.15
+							},
+							"rotation": {
+								"v": [
+									0,
+									0,
+									0
+								],
+								"r": 0.15
+							}
+						},
+						"1d0be1f6-5265-447f-8a72-a4fa2c74e39c": {
+							"visible": {
+								"v": true,
+								"r": 1
+							},
+							"position": {
+								"v": [
+									-0.9112480000000011,
+									2.2446000000000015,
+									0
+								],
+								"r": 0.15
+							},
+							"scale": {
+								"v": [
+									1.7,
+									1.1,
+									1
+								],
+								"r": 0.15
+							}
+						},
+						"2894079e-d7a1-4659-baa7-c24edd08c4c1": {
+							"visible": {
+								"v": false,
+								"r": 1
+							},
+							"position": {
+								"v": [
+									0,
+									0,
+									0
+								],
+								"r": 0.15
+							},
+							"scale": {
+								"v": [
+									2.61,
+									1,
+									1
+								],
+								"r": 0.15
+							}
+						}
+					},
+					"type": "state",
+					"scriptName": "Step7"
+				},
+				{
+					"id": "14d266da-a6b8-4165-852e-e907d9c883cb",
+					"name": "Step8",
+					"overrides": {
+						"6d5948e4-7e92-4add-9c12-820d47c54e81": {
+							"position": {
+								"v": [
+									-2.659922999999999,
+									-1.7497589999999992,
+									0
+								],
+								"r": 0.15
+							},
+							"rotation": {
+								"v": [
+									0,
+									0,
+									0
+								],
+								"r": 0.15
+							},
+							"scale": {
+								"v": [
+									0.5975,
+									0.25,
+									0.25
+								],
+								"r": 0.15
+							},
+							"visible": {
+								"v": false,
+								"r": 1
+							}
+						},
+						"7e062883-e2c3-4c7c-a5ff-fc8e41be5636": {
+							"visible": {
+								"v": false,
+								"r": 1
+							}
+						},
+						"3c6783ec-fcef-43ad-b7c0-4b9a987fe658": {
+							"visible": {
+								"v": false,
+								"r": 1
+							}
+						},
+						"f52565a9-269a-48ae-b700-21da30ae0db1": {
+							"position": {
+								"v": [
+									-2.8,
+									-1,
+									0
+								],
+								"r": 0.15
+							},
+							"visible": {
+								"v": false,
+								"r": 1
+							}
+						},
+						"81e11f13-eeac-4486-976a-167f1da8f5a6": {
+							"position": {
+								"v": [
+									-2.8,
+									-1,
+									0
+								],
+								"r": 0.15
+							},
+							"visible": {
+								"v": false,
+								"r": 1
+							}
+						},
+						"cf51f4fe-f108-4a29-b0c8-508eaf348534": {
+							"visible": {
+								"v": false,
+								"r": 1
+							}
+						},
+						"61bacad7-6b06-4034-92df-e1692ecc66cb": {
+							"visible": {
+								"v": true,
+								"r": 1
+							},
+							"scale": {
+								"v": [
+									1,
+									1,
+									1
+								],
+								"r": 0.15
+							},
+							"position": {
+								"v": [
+									-0.6633910000000008,
+									0,
+									0
+								],
+								"r": 0.15
+							},
+							"color": {
+								"v": [
+									1,
+									1,
+									1,
+									0.44
+								],
+								"r": 0.15
+							},
+							"rotation": {
+								"v": [
+									0,
+									0,
+									0
+								],
+								"r": 0.15
+							}
+						},
+						"e733590c-2e92-43f5-930b-babb20d4dc3e": {
+							"visible": {
+								"v": true,
+								"r": 1
+							}
+						},
+						"da782786-1fa3-4f4a-a4ac-e003318a673a": {
+							"visible": {
+								"v": false,
+								"r": 1
+							},
+							"scale": {
+								"v": [
+									0.3,
+									0.3,
+									0.3
+								],
+								"r": 0.15
+							},
+							"position": {
+								"v": [
+									0,
+									0,
+									0
+								],
+								"r": 0.15
+							}
+						},
+						"215e4c8a-181f-4943-b467-33c1c3b55a2f": {
+							"visible": {
+								"v": true,
+								"r": 1
+							},
+							"position": {
+								"v": [
+									0.16915030000000042,
+									2.0379349999999987,
+									0
+								],
+								"r": 0.15
+							},
+							"text": {
+								"v": "Grab the hard drive and left\nhard drive bracket together.\n\nTilt the left side up away from\nthe rear case, and slide the\nassembly to the left.\n\nRemove the hard drive and\nleft hard drive bracket from\nthe iMac.",
+								"r": 1
+							},
+							"hAlign": {
+								"v": "left",
+								"r": 1
+							}
+						},
+						"f9c695fb-092b-44af-a04c-f1b1065ec196": {
+							"visible": {
+								"v": false,
+								"r": 1
+							},
+							"scale": {
+								"v": [
+									0.3,
+									0.3,
+									0.3
+								],
+								"r": 0.15
+							},
+							"position": {
+								"v": [
+									0,
+									0,
+									0
+								],
+								"r": 0.15
+							}
+						},
+						"4671c771-e165-44c3-9310-5a309fc7cf4b": {
+							"visible": {
+								"v": false,
+								"r": 1
+							},
+							"position": {
+								"v": [
+									0,
+									0,
+									0
+								],
+								"r": 0.15
+							},
+							"scale": {
+								"v": [
+									1,
+									1,
+									1
+								],
+								"r": 0.15
+							},
+							"rotation": {
+								"v": [
+									0,
+									0,
+									0
+								],
+								"r": 0.15
+							}
+						},
+						"1d0be1f6-5265-447f-8a72-a4fa2c74e39c": {
+							"visible": {
+								"v": true,
+								"r": 1
+							},
+							"position": {
+								"v": [
+									-0.3297310000000012,
+									2.0573599999999996,
+									0
+								],
+								"r": 0.15
+							},
+							"scale": {
+								"v": [
+									1.3,
+									1.1,
+									1
+								],
+								"r": 0.15
+							}
+						},
+						"2894079e-d7a1-4659-baa7-c24edd08c4c1": {
+							"visible": {
+								"v": false,
+								"r": 1
+							},
+							"position": {
+								"v": [
+									0,
+									0,
+									0
+								],
+								"r": 0.15
+							},
+							"scale": {
+								"v": [
+									2.61,
+									1,
+									1
+								],
+								"r": 0.15
+							}
+						}
+					},
+					"type": "state",
+					"scriptName": "Step8"
+				},
+				{
+					"id": "85918dd6-1fbc-482b-aa2f-b3cb40ba4009",
+					"name": "Step9",
+					"overrides": {
+						"6d5948e4-7e92-4add-9c12-820d47c54e81": {
+							"position": {
+								"v": [
+									-2.659922999999999,
+									-1.7497589999999992,
+									0
+								],
+								"r": 0.15
+							},
+							"rotation": {
+								"v": [
+									0,
+									0,
+									0
+								],
+								"r": 0.15
+							},
+							"scale": {
+								"v": [
+									0.5975,
+									0.25,
+									0.25
+								],
+								"r": 0.15
+							},
+							"visible": {
+								"v": false,
+								"r": 1
+							}
+						},
+						"7e062883-e2c3-4c7c-a5ff-fc8e41be5636": {
+							"visible": {
+								"v": false,
+								"r": 1
+							}
+						},
+						"3c6783ec-fcef-43ad-b7c0-4b9a987fe658": {
+							"visible": {
+								"v": false,
+								"r": 1
+							}
+						},
+						"f52565a9-269a-48ae-b700-21da30ae0db1": {
+							"position": {
+								"v": [
+									-2.8,
+									-1,
+									0
+								],
+								"r": 0.15
+							},
+							"visible": {
+								"v": false,
+								"r": 1
+							}
+						},
+						"81e11f13-eeac-4486-976a-167f1da8f5a6": {
+							"position": {
+								"v": [
+									-2.8,
+									-1,
+									0
+								],
+								"r": 0.15
+							},
+							"visible": {
+								"v": false,
+								"r": 1
+							}
+						},
+						"cf51f4fe-f108-4a29-b0c8-508eaf348534": {
+							"visible": {
+								"v": false,
+								"r": 1
+							}
+						},
+						"61bacad7-6b06-4034-92df-e1692ecc66cb": {
+							"visible": {
+								"v": true,
+								"r": 1
+							},
+							"scale": {
+								"v": [
+									1,
+									1,
+									1
+								],
+								"r": 0.15
+							},
+							"position": {
+								"v": [
+									-0.4029149999999984,
+									0.36654100000000067,
+									3.305576999999998
+								],
+								"r": 0.15
+							},
+							"color": {
+								"v": [
+									1,
+									1,
+									1,
+									1
+								],
+								"r": 0.15
+							},
+							"rotation": {
+								"v": [
+									0,
+									-30,
+									0
+								],
+								"r": 0.15
+							}
+						},
+						"e733590c-2e92-43f5-930b-babb20d4dc3e": {
+							"visible": {
+								"v": true,
+								"r": 1
+							}
+						},
+						"da782786-1fa3-4f4a-a4ac-e003318a673a": {
+							"visible": {
+								"v": false,
+								"r": 1
+							},
+							"scale": {
+								"v": [
+									0.3,
+									0.3,
+									0.3
+								],
+								"r": 0.15
+							},
+							"position": {
+								"v": [
+									0,
+									0,
+									0
+								],
+								"r": 0.15
+							}
+						},
+						"215e4c8a-181f-4943-b467-33c1c3b55a2f": {
+							"visible": {
+								"v": true,
+								"r": 1
+							},
+							"position": {
+								"v": [
+									0.19592199999999743,
+									1.1755290000000003,
+									2.6333439999999992
+								],
+								"r": 0.15
+							},
+							"text": {
+								"v": "Remove the left hard\ndrive bracket",
+								"r": 1
+							},
+							"hAlign": {
+								"v": "left",
+								"r": 1
+							}
+						},
+						"f9c695fb-092b-44af-a04c-f1b1065ec196": {
+							"visible": {
+								"v": false,
+								"r": 1
+							},
+							"scale": {
+								"v": [
+									0.3,
+									0.3,
+									0.3
+								],
+								"r": 0.15
+							},
+							"position": {
+								"v": [
+									0,
+									0,
+									0
+								],
+								"r": 0.15
+							}
+						},
+						"4671c771-e165-44c3-9310-5a309fc7cf4b": {
+							"visible": {
+								"v": true,
+								"r": 1
+							},
+							"position": {
+								"v": [
+									0,
+									0,
+									2.4781580000000005
+								],
+								"r": 0.15
+							},
+							"scale": {
+								"v": [
+									0.1,
+									0.1,
+									0.1
+								],
+								"r": 0.15
+							},
+							"rotation": {
+								"v": [
+									15,
+									60,
+									-15
+								],
+								"r": 0.15
+							}
+						},
+						"1d0be1f6-5265-447f-8a72-a4fa2c74e39c": {
+							"visible": {
+								"v": true,
+								"r": 1
+							},
+							"position": {
+								"v": [
+									0.19014100000000073,
+									1.7759099999999957,
+									2.5362060000000017
+								],
+								"r": 0.15
+							},
+							"scale": {
+								"v": [
+									1.8,
+									0.6,
+									1
+								],
+								"r": 0.15
+							}
+						},
+						"2894079e-d7a1-4659-baa7-c24edd08c4c1": {
+							"visible": {
+								"v": false,
+								"r": 1
+							},
+							"position": {
+								"v": [
+									0,
+									0,
+									0
+								],
+								"r": 0.15
+							},
+							"scale": {
+								"v": [
+									2.61,
+									1,
+									1
+								],
+								"r": 0.15
+							}
+						}
+					},
+					"type": "state",
+					"scriptName": "Step9"
+				},
+				{
+					"id": "794758b3-e792-4690-97e0-4a6491c4ee85",
+					"name": "Step9",
+					"overrides": {
+						"6d5948e4-7e92-4add-9c12-820d47c54e81": {
+							"position": {
+								"v": [
+									-2.659922999999999,
+									-1.7497589999999992,
+									0
+								],
+								"r": 0.15
+							},
+							"rotation": {
+								"v": [
+									0,
+									0,
+									0
+								],
+								"r": 0.15
+							},
+							"scale": {
+								"v": [
+									0.5975,
+									0.25,
+									0.25
+								],
+								"r": 0.15
+							},
+							"visible": {
+								"v": false,
+								"r": 1
+							}
+						},
+						"7e062883-e2c3-4c7c-a5ff-fc8e41be5636": {
+							"visible": {
+								"v": false,
+								"r": 1
+							}
+						},
+						"3c6783ec-fcef-43ad-b7c0-4b9a987fe658": {
+							"visible": {
+								"v": false,
+								"r": 1
+							}
+						},
+						"f52565a9-269a-48ae-b700-21da30ae0db1": {
+							"position": {
+								"v": [
+									-2.8,
+									-1,
+									0
+								],
+								"r": 0.15
+							},
+							"visible": {
+								"v": false,
+								"r": 1
+							}
+						},
+						"81e11f13-eeac-4486-976a-167f1da8f5a6": {
+							"position": {
+								"v": [
+									-2.8,
+									-1,
+									0
+								],
+								"r": 0.15
+							},
+							"visible": {
+								"v": false,
+								"r": 1
+							}
+						},
+						"cf51f4fe-f108-4a29-b0c8-508eaf348534": {
+							"visible": {
+								"v": false,
+								"r": 1
+							}
+						},
+						"61bacad7-6b06-4034-92df-e1692ecc66cb": {
+							"visible": {
+								"v": false,
+								"r": 1
+							},
+							"scale": {
+								"v": [
+									1,
+									1,
+									1
+								],
+								"r": 0.15
+							},
+							"position": {
+								"v": [
+									0,
+									0,
+									0
+								],
+								"r": 0.15
+							},
+							"color": {
+								"v": [
+									1,
+									1,
+									1,
+									1
+								],
+								"r": 0.15
+							},
+							"rotation": {
+								"v": [
+									0,
+									0,
+									0
+								],
+								"r": 0.15
+							}
+						},
+						"e733590c-2e92-43f5-930b-babb20d4dc3e": {
+							"visible": {
+								"v": false,
+								"r": 1
+							}
+						},
+						"da782786-1fa3-4f4a-a4ac-e003318a673a": {
+							"visible": {
+								"v": false,
+								"r": 1
+							},
+							"scale": {
+								"v": [
+									0.3,
+									0.3,
+									0.3
+								],
+								"r": 0.15
+							},
+							"position": {
+								"v": [
+									0,
+									0,
+									0
+								],
+								"r": 0.15
+							}
+						},
+						"215e4c8a-181f-4943-b467-33c1c3b55a2f": {
+							"visible": {
+								"v": true,
+								"r": 1
+							},
+							"position": {
+								"v": [
+									0.04197899999999829,
+									-0.2689199999999992,
+									0
+								],
+								"r": 0.15
+							},
+							"text": {
+								"v": "CONGRATS!\n\nYOU MADE IT! :D",
+								"r": 1
+							},
+							"hAlign": {
+								"v": "center",
+								"r": 1
+							}
+						},
+						"f9c695fb-092b-44af-a04c-f1b1065ec196": {
+							"visible": {
+								"v": false,
+								"r": 1
+							},
+							"scale": {
+								"v": [
+									0.3,
+									0.3,
+									0.3
+								],
+								"r": 0.15
+							},
+							"position": {
+								"v": [
+									0,
+									0,
+									0
+								],
+								"r": 0.15
+							}
+						},
+						"4671c771-e165-44c3-9310-5a309fc7cf4b": {
+							"visible": {
+								"v": false,
+								"r": 1
+							},
+							"position": {
+								"v": [
+									0,
+									0,
+									0
+								],
+								"r": 0.15
+							},
+							"scale": {
+								"v": [
+									1,
+									1,
+									1
+								],
+								"r": 0.15
+							},
+							"rotation": {
+								"v": [
+									0,
+									0,
+									0
+								],
+								"r": 0.15
+							}
+						},
+						"1d0be1f6-5265-447f-8a72-a4fa2c74e39c": {
+							"visible": {
+								"v": true,
+								"r": 1
+							},
+							"position": {
+								"v": [
+									0,
+									0,
+									0
+								],
+								"r": 0.15
+							},
+							"scale": {
+								"v": [
+									1.8,
+									1.05,
+									1
+								],
+								"r": 0.15
+							}
+						},
+						"2894079e-d7a1-4659-baa7-c24edd08c4c1": {
+							"visible": {
+								"v": true,
+								"r": 1
+							},
+							"position": {
+								"v": [
+									0,
+									0,
+									0
+								],
+								"r": 0.15
+							},
+							"scale": {
+								"v": [
+									2.61,
+									1,
+									1
+								],
+								"r": 0.15
+							}
+						}
+					},
+					"type": "state",
+					"scriptName": "Step90"
+				}
+			],
+			"default": "f0da0613-703a-4c34-b631-41a1d6d8b497",
+			"scriptName": "openingToolPosition"
+		}
+	],
+	"mediaFiles": [
+		{
+			"type": "objectType",
+			"title": "Plane",
+			"id": "plane",
+			"etag": "1dd69ff7b38bb4de98db325cb2207801",
+			"scriptName": "Plane"
+		},
+		{
+			"type": "image",
+			"title": "iMac inside.jpeg",
+			"filename": "4e72272e-84be-4c2e-b2cd-2a7349e1e59d.jpeg",
+			"id": "c4affa16-9b63-46ef-805a-b18f22e11c09",
+			"contentWrapping": "riff-image",
+			"etag": "6f3195d20ba939857fe8b776ac592060",
+			"scriptName": "iMac_inside_jpeg"
+		},
+		{
+			"type": "target",
+			"title": "iMac Trigger Sierra.png.zpt",
+			"id": "34ef2cc8-3b3f-4bf8-838d-2ae78df877a5",
+			"filename": "a274f485-1c61-49da-8997-dfba49f9946a.zpt",
+			"etag": "34ac91cc1db5dcd760b00a0c1dd22a24",
+			"contentWrapping": "riff-target",
+			"scriptName": "iMac_TriggerSierra_pngzpt"
+		},
+		{
+			"type": "font",
+			"title": "Roboto.ttf",
+			"id": "Roboto.ttf",
+			"contentWrapping": "riff-font",
+			"etag": "6df74dec576c04654e9c54541795f2f5",
+			"scriptName": "Roboto_ttf"
+		},
+		{
+			"type": "image",
+			"title": "iMac Opening Tool.png",
+			"filename": "5e9cb402-7313-495f-afb8-98ea0457626a.png",
+			"id": "11125d9c-822d-4d7e-aa94-5fdba2f401ad",
+			"contentWrapping": "riff-image",
+			"etag": "228c0f27d8dba5ac3026728f0e57a4c9",
+			"scriptName": "iMac_OpeningTool_png"
+		},
+		{
+			"type": "target",
+			"title": "iMac.png.zpt",
+			"id": "a5a26055-e061-4cd5-a753-36f573e23865",
+			"filename": "9f1bcf83-bebd-4875-bc36-1e5d1d92eb5d.zpt",
+			"etag": "cee59a9de8aaa83a3211695055de95b7",
+			"contentWrapping": "riff-target",
+			"scriptName": "iMac_pngzpt"
+		},
+		{
+			"type": "image",
+			"title": "redPoint.png",
+			"filename": "dcc33732-155e-401c-a8b3-6d29eb725954.png",
+			"id": "b5197553-3a3b-4a93-8c68-589c8e09faf6",
+			"contentWrapping": "riff-image",
+			"etag": "5df1076dd23dfa6d4bc78e7062a3ddd5",
+			"scriptName": "redPoint_png"
+		},
+		{
+			"type": "objectType",
+			"title": "harddrive.obj",
+			"filename": "b12c3265-a319-4801-b60d-fe1d4a077348.obj",
+			"id": "52fa4151-55dc-46ff-bde8-36d774b9dfe0",
+			"contentWrapping": null,
+			"etag": "2c4f3ed50a547d3c5ae361bd67f61b13",
+			"scriptName": "harddrive_obj"
+		},
+		{
+			"type": "image",
+			"title": "harddrive.png",
+			"filename": "40baf04d-d6b7-4ec5-882d-2cb2b6954317.png",
+			"id": "94130b1f-030d-41c5-ba33-01b11a209bbc",
+			"contentWrapping": "riff-image",
+			"etag": "57eec1fc94e4ecb340a6a36747d05a04",
+			"scriptName": "harddrive_png"
+		},
+		{
+			"type": "image",
+			"title": "Start Over Button.png",
+			"filename": "23788d03-428c-4573-8a7a-9e55322b9993.png",
+			"id": "6e823326-26c7-48da-9a9b-e1ba6b8eb92f",
+			"contentWrapping": "riff-image",
+			"etag": "cca101c5116747e4f2297ac762249cae",
+			"scriptName": "Start_OverButton_png"
+		}
+	],
+	"symbolDefinitions": [],
+	"exports": {},
+	"attachmentPoints": [],
+	"constructionProperties": {},
+	"notes": {
+		"content": "",
+		"showOnSymbolOpen": false
+	},
+	"symbolProperties": {
+		"editorVersion": 11,
+		"backgroundColor": [
+			0.7499999999999999,
+			0.7499999999999999,
+			0.7499999999999999,
+			1
+		],
+		"objectColours": {
+			"0": [
+				0.6000000000000001,
+				0.8,
+				0.8,
+				1
+			],
+			"1": [
+				0.6000000000000001,
+				0.8,
+				0.8,
+				1
+			],
+			"3": [
+				0.6000000000000001,
+				0.8,
+				0.4,
+				1
+			],
+			"4": [
+				0.6000000000000001,
+				0.4,
+				0.4,
+				1
+			],
+			"6": [
+				0.6000000000000001,
+				0.8,
+				0.6000000000000001,
+				1
+			],
+			"7": [
+				0.6000000000000001,
+				0.4,
+				0.8,
+				1
+			],
+			"10": [
+				0.4,
+				0.6000000000000001,
+				0.8,
+				1
+			],
+			"12": [
+				0.6000000000000001,
+				0.6000000000000001,
+				0.6000000000000001,
+				1
+			],
+			"13": [
+				0.4,
+				0.4,
+				0.4,
+				1
+			],
+			"14": [
+				0.4,
+				0.4,
+				0.6000000000000001,
+				1
+			],
+			"e692d7e2-3f8f-4ad7-a034-1a7d9ba9d514": [
+				0.4,
+				0.8,
+				0.8,
+				1
+			],
+			"e733590c-2e92-43f5-930b-babb20d4dc3e": [
+				0.4,
+				0.6000000000000001,
+				0.6000000000000001,
+				1
+			],
+			"b7a8f04e-e4ec-42b2-b809-739652449ffd": [
+				0.6000000000000001,
+				0.8,
+				0.6000000000000001,
+				1
+			],
+			"c0333d80-6e36-432b-b604-ba3b825593f7": [
+				0.6000000000000001,
+				0.8,
+				0.8,
+				1
+			],
+			"620be47f-4880-4285-be8b-274bfa22fca9": [
+				0.8,
+				0.4,
+				0.6000000000000001,
+				1
+			],
+			"0c1651bd-3a6d-49f0-8235-e2241e14f388": [
+				0.6000000000000001,
+				0.4,
+				0.6000000000000001,
+				1
+			],
+			"3c6783ec-fcef-43ad-b7c0-4b9a987fe658": [
+				0.6000000000000001,
+				0.8,
+				0.4,
+				1
+			],
+			"6d5948e4-7e92-4add-9c12-820d47c54e81": [
+				0.8,
+				0.8,
+				0.6000000000000001,
+				1
+			],
+			"7e062883-e2c3-4c7c-a5ff-fc8e41be5636": [
+				0.6000000000000001,
+				0.4,
+				0.4,
+				1
+			],
+			"f52565a9-269a-48ae-b700-21da30ae0db1": [
+				0.6000000000000001,
+				0.6000000000000001,
+				0.6000000000000001,
+				1
+			],
+			"81e11f13-eeac-4486-976a-167f1da8f5a6": [
+				0.4,
+				0.6000000000000001,
+				0.6000000000000001,
+				1
+			],
+			"b8598dfd-34a3-4399-8282-0ac471d505e7": [
+				0.8,
+				0.8,
+				0.6000000000000001,
+				1
+			],
+			"6ad15967-8f16-41ad-8a5b-526c15f2f20e": [
+				0.4,
+				0.4,
+				0.4,
+				1
+			],
+			"25412eae-3108-4f94-b941-c8775e82699a": [
+				0.4,
+				0.4,
+				0.6000000000000001,
+				1
+			],
+			"2841e4c3-251e-443c-ade3-5ffb162987b4": [
+				0.8,
+				0.4,
+				0.8,
+				1
+			],
+			"a74c281d-f132-40ee-abd1-22d32d03de1e": [
+				0.4,
+				0.8,
+				0.4,
+				1
+			],
+			"b0f77968-2711-4d0d-ab52-142771ba1521": [
+				0.4,
+				0.6000000000000001,
+				0.4,
+				1
+			],
+			"f9f2fea4-3c0e-4c4b-bae1-950401c1ff55": [
+				0.6000000000000001,
+				0.4,
+				0.8,
+				1
+			],
+			"cf51f4fe-f108-4a29-b0c8-508eaf348534": [
+				0.6000000000000001,
+				0.4,
+				0.6000000000000001,
+				1
+			],
+			"61bacad7-6b06-4034-92df-e1692ecc66cb": [
+				0.4,
+				0.4,
+				0.6000000000000001,
+				1
+			],
+			"da782786-1fa3-4f4a-a4ac-e003318a673a": [
+				0.6000000000000001,
+				0.6000000000000001,
+				0.4,
+				1
+			],
+			"215e4c8a-181f-4943-b467-33c1c3b55a2f": [
+				0.6000000000000001,
+				0.8,
+				0.4,
+				1
+			],
+			"f9c695fb-092b-44af-a04c-f1b1065ec196": [
+				0.6000000000000001,
+				0.4,
+				0.4,
+				1
+			],
+			"4671c771-e165-44c3-9310-5a309fc7cf4b": [
+				0.6000000000000001,
+				0.8,
+				0.4,
+				1
+			],
+			"1d0be1f6-5265-447f-8a72-a4fa2c74e39c": [
+				0.8,
+				0.4,
+				0.6000000000000001,
+				1
+			],
+			"2894079e-d7a1-4659-baa7-c24edd08c4c1": [
+				0.6000000000000001,
+				0.8,
+				0.6000000000000001,
+				1
+			]
+		}
+	},
+	"share": {}
+}

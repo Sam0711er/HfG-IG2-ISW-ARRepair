@@ -1,0 +1,61 @@
+{
+	"selectedTargetId": null,
+	"timelineEditorProperties": {
+		"2": {
+			"zoom": 1,
+			"scrollTop": 0,
+			"scrollLeft": 0
+		},
+		"5": {
+			"zoom": 1,
+			"scrollTop": 0,
+			"scrollLeft": 0
+		}
+	},
+	"collapsed": {
+		"12": false,
+		"13": false,
+		"14": false,
+		"-1-base": false,
+		"mig-5": true,
+		"mig-2": true
+	},
+	"eventEditor": {
+		"1": {
+			"cursor": {
+				"row": 0,
+				"column": 0
+			}
+		},
+		"3": {
+			"cursor": {
+				"row": 10,
+				"column": 2
+			}
+		},
+		"6": {
+			"cursor": {
+				"row": 6,
+				"column": 2
+			}
+		},
+		"7": {
+			"cursor": {
+				"row": 6,
+				"column": 2
+			}
+		},
+		"12": {
+			"cursor": {
+				"row": 14,
+				"column": 0
+			}
+		},
+		"13": {
+			"cursor": {
+				"row": 12,
+				"column": 1
+			}
+		}
+	}
+}

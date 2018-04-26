@@ -1,0 +1,117 @@
+{
+	"selectedTargetId": "0c1651bd-3a6d-49f0-8235-e2241e14f388",
+	"timelineEditorProperties": {
+		"2": {
+			"zoom": 1,
+			"scrollTop": 0,
+			"scrollLeft": 0
+		},
+		"5": {
+			"zoom": 1,
+			"scrollTop": 0,
+			"scrollLeft": 0
+		}
+	},
+	"collapsed": {
+		"12": false,
+		"13": false,
+		"14": false,
+		"-1-base": false,
+		"mig-5": true,
+		"mig-2": false,
+		"e692d7e2-3f8f-4ad7-a034-1a7d9ba9d514": false,
+		"e733590c-2e92-43f5-930b-babb20d4dc3e": false,
+		"b7a8f04e-e4ec-42b2-b809-739652449ffd": false,
+		"c0333d80-6e36-432b-b604-ba3b825593f7": false,
+		"620be47f-4880-4285-be8b-274bfa22fca9": false,
+		"0c1651bd-3a6d-49f0-8235-e2241e14f388": false,
+		"3c6783ec-fcef-43ad-b7c0-4b9a987fe658": false,
+		"6d5948e4-7e92-4add-9c12-820d47c54e81": false,
+		"57675765-7601-46cc-9fc1-5629b3d29998": false,
+		"9eceea00-e2a3-4d92-a54e-a0f3b609f4fb": false,
+		"7e062883-e2c3-4c7c-a5ff-fc8e41be5636": false
+	},
+	"eventEditor": {
+		"1": {
+			"cursor": {
+				"row": 0,
+				"column": 0
+			}
+		},
+		"3": {
+			"cursor": {
+				"row": 10,
+				"column": 2
+			}
+		},
+		"6": {
+			"cursor": {
+				"row": 6,
+				"column": 2
+			}
+		},
+		"7": {
+			"cursor": {
+				"row": 6,
+				"column": 2
+			}
+		},
+		"12": {
+			"cursor": {
+				"row": 14,
+				"column": 0
+			}
+		},
+		"13": {
+			"cursor": {
+				"row": 12,
+				"column": 1
+			}
+		},
+		"c0333d80-6e36-432b-b604-ba3b825593f7": {
+			"cursor": {
+				"row": 17,
+				"column": 25
+			}
+		}
+	},
+	"e692d7e2-3f8f-4ad7-a034-1a7d9ba9d514": {
+		"position": [
+			0,
+			0,
+			-5
+		],
+		"rotation": [
+			0,
+			0,
+			0
+		],
+		"upright": true
+	},
+	"620be47f-4880-4285-be8b-274bfa22fca9": {
+		"position": [
+			0,
+			0,
+			-5
+		],
+		"rotation": [
+			0,
+			0,
+			0
+		],
+		"upright": true
+	},
+	"0c1651bd-3a6d-49f0-8235-e2241e14f388": {
+		"position": [
+			0,
+			0,
+			-8.45332932
+		],
+		"rotation": [
+			0,
+			0,
+			0
+		],
+		"upright": true
+	}
+}

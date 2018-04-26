@@ -23,6 +23,7 @@ This specific ARRepair tutorial shows you how to replace the hard drive of a 27"
 ## Credit
 Project by [Sam Eckert](https://github.com/Sam0711er) for the workshop Augmented Reality Art, lectured by [Marcin Wichrowski](https://github.com/marcinwichrowski), as part of the International Seminar Week at the [Hochschule für Gestaltung Schwäbisch Gmünd](https://github.com/hfg-gmuend).
 
+Trigger Image by [Apple](https://apple.com).
 
 [Marcin Wichrowski](http://wichrowski.pl)</br>
 Augmented Reality Art

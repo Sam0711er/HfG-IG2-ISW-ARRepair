@@ -1,0 +1,1088 @@
+{
+	"hierarchy": {
+		"nodeType": "Root",
+		"id": "0",
+		"name": "root",
+		"children": [
+			{
+				"id": "25412eae-3108-4f94-b941-c8775e82699a",
+				"name": "iMac.png.zpt0",
+				"children": [
+					{
+						"id": "2841e4c3-251e-443c-ade3-5ffb162987b4",
+						"name": "FourthExplanation0",
+						"nodeType": "Text",
+						"children": [],
+						"parameters": {
+							"font": "Roboto.ttf",
+							"text": "Wheel the tool down\nalong the right side of\nthe display and finish\npushing the opening tool\nto the bottom of the right\nside of the display.",
+							"layerMode": "overlay",
+							"lines": 7.172274971548636,
+							"scale": [
+								0.3586137485774317,
+								0.3586137485774317,
+								0.3586137485774317
+							],
+							"lineScale": 1.863061948804827,
+							"position": [
+								-2.8,
+								-1,
+								0
+							],
+							"shadow": [
+								0,
+								0,
+								0
+							],
+							"visible": false
+						},
+						"scriptName": "FourthExplanation0"
+					}
+				],
+				"parameters": {
+					"source": "a5a26055-e061-4cd5-a753-36f573e23865"
+				},
+				"nodeType": "Target",
+				"scriptName": "iMac_pngzpt0"
+			},
+			{
+				"id": "0c1651bd-3a6d-49f0-8235-e2241e14f388",
+				"name": "iMac Trigger Sierra.png.zpt0",
+				"children": [
+					{
+						"id": "b7a8f04e-e4ec-42b2-b809-739652449ffd",
+						"name": "Plane0",
+						"children": [
+							{
+								"id": "c0333d80-6e36-432b-b604-ba3b825593f7",
+								"name": "Plane0-pointerdown0",
+								"nodeType": "Script",
+								"children": [],
+								"parameters": {
+									"code": "const imac = symbol.nodes.iMac_inside_jpeg0;\nconst iMacOpeningTool = symbol.nodes.iMac_OpeningTool_png0;\n\n\n// TEXTS\nconst firstExplanation = symbol.nodes.FirstExplanation;\n\nvar stepCount = 1;\n\nparent.on(\"pointerdown\", (e) => {\n\t// Runs when pointerdown occurs on the parent node\n\t// The argument e contains useful info about this event:\n\t// https://docs.zap.works/studio/scripting/reference/object/events/pointerdown/\n\t\n\tvar stepSymbol = symbol.controllers.openingToolPosition.elements['Step' + stepCount];\n\tstepSymbol.activate();\n    stepCount++;\n\n    \n  /*  switch (stepCount){\n        case 0:\n            console.log(\"Step 0\");\n            break;\n        case 1:\n            console.log(\"Step 1\");\n            symbol.controllers.openingToolPosition.elements.Step1+.activate();\n            break;\n        case 2:\n            console.log(\"Step 2\");\n            symbol.controllers.openingToolPosition.elements.Step2.activate();\n            break;\n        case 3:\n            console.log(\"Step 3\");\n            symbol.controllers.openingToolPosition.elements.Step3.activate();\n            break;\n    }*/\n\t\n});\n\nvar display_shown = symbol.controllers.display.elements.shown;\nvar display_hidden = symbol.controllers.display.elements.hidden;\n\nparent.on(\"show\", parent_show);\nfunction parent_show() {\n\n    // Make sure we start from fully hidden\n    display_hidden.reset();\n\n    // Move to the shown state\n    display_shown.activate();\n\n    symbol.controllers.openingToolPosition.elements.Step0.activate();\n\n    // The Console log message\n    console.log(\"This is a console log message on show\");\n}"
+								},
+								"scriptName": "Plane0_pointerdown0"
+							}
+						],
+						"parameters": {
+							"type": "plane",
+							"layerMode": "overlay",
+							"visible": false,
+							"scale": [
+								10,
+								10,
+								10
+							],
+							"rotation": [
+								0,
+								0,
+								0
+							],
+							"position": [
+								0,
+								0,
+								0
+							],
+							"regionScale": [
+								10,
+								10,
+								10
+							]
+						},
+						"nodeType": "Object",
+						"scriptName": "Plane0"
+					},
+					{
+						"id": "e733590c-2e92-43f5-930b-babb20d4dc3e",
+						"name": "iMac inside.jpeg0",
+						"children": [],
+						"parameters": {
+							"materials": [
+								"c4affa16-9b63-46ef-805a-b18f22e11c09"
+							],
+							"type": "plane",
+							"layerMode": "overlay",
+							"scale": [
+								1.78,
+								1,
+								1
+							],
+							"visible": true
+						},
+						"nodeType": "Object",
+						"scriptName": "iMac_inside_jpeg0"
+					},
+					{
+						"id": "81e11f13-eeac-4486-976a-167f1da8f5a6",
+						"name": "FourthExplanation",
+						"nodeType": "Text",
+						"children": [],
+						"parameters": {
+							"font": "Roboto.ttf",
+							"text": "Wheel the tool down\nalong the right side of\nthe display and finish\npushing the opening tool\nto the bottom of the right\nside of the display.",
+							"layerMode": "overlay",
+							"lines": 7.172274971548636,
+							"scale": [
+								0.3586137485774317,
+								0.3586137485774317,
+								0.3586137485774317
+							],
+							"lineScale": 1.863061948804827,
+							"position": [
+								-2.8,
+								-1,
+								0
+							],
+							"shadow": [
+								0,
+								0,
+								0
+							],
+							"visible": false
+						},
+						"scriptName": "FourthExplanation"
+					},
+					{
+						"id": "f52565a9-269a-48ae-b700-21da30ae0db1",
+						"name": "ThirdExplanation",
+						"nodeType": "Text",
+						"children": [],
+						"parameters": {
+							"font": "Roboto.ttf",
+							"text": "Cut the adhesive along\nthe top of the display.",
+							"layerMode": "overlay",
+							"lines": 5.131137620180588,
+							"scale": [
+								0.25655688100902935,
+								0.25655688100902935,
+								0.25655688100902935
+							],
+							"lineScale": 2.604177392027775,
+							"position": [
+								-2.8,
+								-1,
+								0
+							],
+							"shadow": [
+								0,
+								0,
+								0
+							],
+							"visible": false
+						},
+						"scriptName": "ThirdExplanation"
+					},
+					{
+						"id": "7e062883-e2c3-4c7c-a5ff-fc8e41be5636",
+						"name": "SecondExplanation",
+						"nodeType": "Text",
+						"children": [],
+						"parameters": {
+							"font": "Roboto.ttf",
+							"text": "Use the tool like a pizza cutter:\nroll it along through the gap,\nand it will cut the foam adhesive\nthrough the center.",
+							"layerMode": "overlay",
+							"lines": 5.131137620180588,
+							"scale": [
+								0.25655688100902935,
+								0.25655688100902935,
+								0.25655688100902935
+							],
+							"lineScale": 2.604177392027775,
+							"position": [
+								-2.8,
+								1.6,
+								0
+							],
+							"shadow": [
+								0,
+								0,
+								0
+							]
+						},
+						"scriptName": "SecondExplanation"
+					},
+					{
+						"id": "3c6783ec-fcef-43ad-b7c0-4b9a987fe658",
+						"name": "FirstExplanation",
+						"nodeType": "Text",
+						"children": [],
+						"parameters": {
+							"font": "Roboto.ttf",
+							"text": "Starting on the left of the display,\nnear the power button, insert the\niMac Opening Tool into the gap\nbetween the glass panel and the\nrear case.",
+							"layerMode": "overlay",
+							"lines": 5.131137620180588,
+							"scale": [
+								0.25655688100902935,
+								0.25655688100902935,
+								0.25655688100902935
+							],
+							"lineScale": 2.604177392027775,
+							"position": [
+								-2.8,
+								-1,
+								0
+							],
+							"shadow": [
+								0,
+								0,
+								0
+							]
+						},
+						"scriptName": "FirstExplanation"
+					},
+					{
+						"id": "6d5948e4-7e92-4add-9c12-820d47c54e81",
+						"name": "iMac Opening Tool.png0",
+						"children": [],
+						"parameters": {
+							"materials": [
+								"11125d9c-822d-4d7e-aa94-5fdba2f401ad"
+							],
+							"type": "plane",
+							"layerMode": "overlay",
+							"scale": [
+								0.5975,
+								0.25,
+								0.25
+							],
+							"position": [
+								-2.659922999999999,
+								-1.7497589999999992,
+								0
+							],
+							"regionScale": [
+								1,
+								1.324884,
+								1
+							]
+						},
+						"nodeType": "Object",
+						"scriptName": "iMac_OpeningTool_png0"
+					}
+				],
+				"parameters": {
+					"source": "34ef2cc8-3b3f-4bf8-838d-2ae78df877a5",
+					"visible": false
+				},
+				"nodeType": "Target",
+				"scriptName": "iMac_TriggerSierra_pngzpt0"
+			},
+			{
+				"id": "12",
+				"name": "show",
+				"nodeType": "Script",
+				"children": [],
+				"parameters": {
+					"code": "var display_shown = symbol.controllers.display.elements.shown;\nvar display_hidden = symbol.controllers.display.elements.hidden;\n\nparent.on(\"show\", parent_show);\nfunction parent_show() {\n    \n    // Make sure we start from fully hidden\n    display_hidden.reset();\n    \n    // Move to the shown state\n    display_shown.activate();\n\t\n}\n\n"
+				},
+				"scriptName": "show0"
+			},
+			{
+				"id": "13",
+				"name": "hide",
+				"nodeType": "Script",
+				"children": [],
+				"parameters": {
+					"code": "var display_hidden = symbol.controllers.display.elements.hidden;\n\n\nparent.on(\"hide\", parent_hide);\nfunction parent_hide() {\n\t\n\t// Once we're fully hidden we should emit the \"hidden\" signal\n\tdisplay_hidden.one(\"complete\", function() {\n\t    symbol.emit(\"hidden\");\n\t});\n\t\n\tdisplay_hidden.activate();\n}"
+				},
+				"scriptName": "hide"
+			},
+			{
+				"id": "4",
+				"name": "accelerometer",
+				"nodeType": "Accelerometer",
+				"children": [],
+				"parameters": {
+					"landscapeState": "10",
+					"portraitState": "11"
+				},
+				"scriptName": "accelerometer"
+			}
+		],
+		"parameters": {
+			"relativeTo": [
+				"Z.screen"
+			]
+		},
+		"scriptName": "root"
+	},
+	"controllers": [
+		{
+			"id": "mig-2",
+			"name": "display",
+			"default": "8",
+			"elements": [
+				{
+					"id": "8",
+					"name": "shown",
+					"overrides": {
+						"0": {
+							"enabled": {
+								"v": true,
+								"r": 1,
+								"p": 1
+							},
+							"visible": {
+								"v": true,
+								"r": 1
+							},
+							"color": {
+								"v": [
+									1,
+									1,
+									1,
+									1
+								],
+								"r": 0.15
+							}
+						}
+					},
+					"type": "state",
+					"scriptName": "shown"
+				},
+				{
+					"id": "9",
+					"name": "hidden",
+					"overrides": {
+						"0": {
+							"enabled": {
+								"v": false,
+								"r": 1
+							},
+							"visible": {
+								"v": false,
+								"r": 1,
+								"p": 1
+							},
+							"color": {
+								"v": [
+									1,
+									1,
+									1,
+									0
+								],
+								"r": 0.15
+							}
+						}
+					},
+					"type": "state",
+					"scriptName": "hidden"
+				}
+			],
+			"scriptName": "display"
+		},
+		{
+			"id": "mig-5",
+			"name": "orientation",
+			"default": "10",
+			"elements": [
+				{
+					"id": "10",
+					"name": "landscape",
+					"overrides": {},
+					"type": "state",
+					"scriptName": "landscape"
+				},
+				{
+					"id": "11",
+					"name": "portrait",
+					"overrides": {},
+					"type": "state",
+					"scriptName": "portrait"
+				}
+			],
+			"scriptName": "orientation"
+		},
+		{
+			"id": "9eceea00-e2a3-4d92-a54e-a0f3b609f4fb",
+			"name": "openingToolPosition",
+			"elements": [
+				{
+					"id": "e9ba0644-bd29-468c-be53-7f2a1c2a5f2d",
+					"name": "Step1",
+					"overrides": {
+						"6d5948e4-7e92-4add-9c12-820d47c54e81": {
+							"position": {
+								"v": [
+									-2.659922999999999,
+									-1.7497589999999992,
+									0
+								],
+								"r": 0.15
+							},
+							"rotation": {
+								"v": [
+									0,
+									0,
+									0
+								],
+								"r": 0.15
+							},
+							"scale": {
+								"v": [
+									0.5975,
+									0.25,
+									0.25
+								],
+								"r": 0.15
+							},
+							"visible": {
+								"v": true,
+								"r": 1
+							}
+						},
+						"7e062883-e2c3-4c7c-a5ff-fc8e41be5636": {
+							"visible": {
+								"v": false,
+								"r": 1
+							}
+						},
+						"3c6783ec-fcef-43ad-b7c0-4b9a987fe658": {
+							"visible": {
+								"v": true,
+								"r": 1
+							}
+						},
+						"f52565a9-269a-48ae-b700-21da30ae0db1": {
+							"position": {
+								"v": [
+									-2.8,
+									-1,
+									0
+								],
+								"r": 0.15
+							},
+							"visible": {
+								"v": false,
+								"r": 1
+							}
+						},
+						"81e11f13-eeac-4486-976a-167f1da8f5a6": {
+							"position": {
+								"v": [
+									-2.8,
+									-1,
+									0
+								],
+								"r": 0.15
+							},
+							"visible": {
+								"v": false,
+								"r": 1
+							}
+						},
+						"2841e4c3-251e-443c-ade3-5ffb162987b4": {
+							"position": {
+								"v": [
+									-2.8,
+									-1,
+									0
+								],
+								"r": 0.15
+							},
+							"visible": {
+								"v": false,
+								"r": 1
+							}
+						}
+					},
+					"type": "state",
+					"scriptName": "Step1"
+				},
+				{
+					"id": "1e05cebe-e5a2-4e67-8930-85619d5059cc",
+					"name": "Step2",
+					"overrides": {
+						"6d5948e4-7e92-4add-9c12-820d47c54e81": {
+							"position": {
+								"v": [
+									-2.659922999999999,
+									1.0698869999999978,
+									0
+								],
+								"r": 0.15
+							},
+							"rotation": {
+								"v": [
+									0,
+									0,
+									0
+								],
+								"r": 0.15
+							},
+							"scale": {
+								"v": [
+									0.5975,
+									0.25,
+									0.25
+								],
+								"r": 0.15
+							},
+							"visible": {
+								"v": true,
+								"r": 1
+							}
+						},
+						"7e062883-e2c3-4c7c-a5ff-fc8e41be5636": {
+							"visible": {
+								"v": true,
+								"r": 1
+							}
+						},
+						"3c6783ec-fcef-43ad-b7c0-4b9a987fe658": {
+							"visible": {
+								"v": false,
+								"r": 1
+							}
+						},
+						"f52565a9-269a-48ae-b700-21da30ae0db1": {
+							"position": {
+								"v": [
+									0.6812950000000031,
+									1.4492140000000018,
+									0
+								],
+								"r": 0.15
+							},
+							"visible": {
+								"v": false,
+								"r": 1
+							}
+						},
+						"81e11f13-eeac-4486-976a-167f1da8f5a6": {
+							"position": {
+								"v": [
+									-2.8,
+									-1,
+									0
+								],
+								"r": 0.15
+							},
+							"visible": {
+								"v": false,
+								"r": 1
+							}
+						},
+						"2841e4c3-251e-443c-ade3-5ffb162987b4": {
+							"position": {
+								"v": [
+									-2.8,
+									-1,
+									0
+								],
+								"r": 0.15
+							},
+							"visible": {
+								"v": false,
+								"r": 1
+							}
+						}
+					},
+					"type": "state",
+					"scriptName": "Step2"
+				},
+				{
+					"id": "6ad82543-d2b2-4eca-8c79-9e1eb68ff5da",
+					"name": "Step3",
+					"overrides": {
+						"6d5948e4-7e92-4add-9c12-820d47c54e81": {
+							"position": {
+								"v": [
+									1.6605299999999996,
+									1.8761050000000006,
+									0
+								],
+								"r": 0.15
+							},
+							"rotation": {
+								"v": [
+									0,
+									0,
+									-90
+								],
+								"r": 0.15
+							},
+							"scale": {
+								"v": [
+									0.5975,
+									0.25,
+									0.25
+								],
+								"r": 0.15
+							},
+							"visible": {
+								"v": true,
+								"r": 1
+							}
+						},
+						"7e062883-e2c3-4c7c-a5ff-fc8e41be5636": {
+							"visible": {
+								"v": false,
+								"r": 1
+							}
+						},
+						"3c6783ec-fcef-43ad-b7c0-4b9a987fe658": {
+							"visible": {
+								"v": false,
+								"r": 1
+							}
+						},
+						"f52565a9-269a-48ae-b700-21da30ae0db1": {
+							"position": {
+								"v": [
+									0.6812950000000031,
+									1.4492140000000018,
+									0
+								],
+								"r": 0.15
+							},
+							"visible": {
+								"v": true,
+								"r": 1
+							}
+						},
+						"81e11f13-eeac-4486-976a-167f1da8f5a6": {
+							"position": {
+								"v": [
+									0.6812950000000031,
+									1.4492140000000018,
+									0
+								],
+								"r": 0.15
+							},
+							"visible": {
+								"v": false,
+								"r": 1
+							}
+						},
+						"2841e4c3-251e-443c-ade3-5ffb162987b4": {
+							"position": {
+								"v": [
+									0.6812950000000031,
+									1.4492140000000018,
+									0
+								],
+								"r": 0.15
+							},
+							"visible": {
+								"v": false,
+								"r": 1
+							}
+						}
+					},
+					"type": "state",
+					"scriptName": "Step3"
+				},
+				{
+					"id": "f0da0613-703a-4c34-b631-41a1d6d8b497",
+					"name": "Step0",
+					"overrides": {
+						"6d5948e4-7e92-4add-9c12-820d47c54e81": {
+							"position": {
+								"v": [
+									-2.659922999999999,
+									-1.7497589999999992,
+									0
+								],
+								"r": 0.15
+							},
+							"rotation": {
+								"v": [
+									0,
+									0,
+									0
+								],
+								"r": 0.15
+							},
+							"scale": {
+								"v": [
+									0.5975,
+									0.25,
+									0.25
+								],
+								"r": 0.15
+							},
+							"visible": {
+								"v": false,
+								"r": 1
+							}
+						},
+						"7e062883-e2c3-4c7c-a5ff-fc8e41be5636": {
+							"visible": {
+								"v": false,
+								"r": 1
+							}
+						},
+						"3c6783ec-fcef-43ad-b7c0-4b9a987fe658": {
+							"visible": {
+								"v": false,
+								"r": 1
+							}
+						},
+						"f52565a9-269a-48ae-b700-21da30ae0db1": {
+							"position": {
+								"v": [
+									-2.8,
+									-1,
+									0
+								],
+								"r": 0.15
+							},
+							"visible": {
+								"v": false,
+								"r": 1
+							}
+						},
+						"81e11f13-eeac-4486-976a-167f1da8f5a6": {
+							"position": {
+								"v": [
+									-2.8,
+									-1,
+									0
+								],
+								"r": 0.15
+							},
+							"visible": {
+								"v": false,
+								"r": 1
+							}
+						},
+						"2841e4c3-251e-443c-ade3-5ffb162987b4": {
+							"position": {
+								"v": [
+									-2.8,
+									-1,
+									0
+								],
+								"r": 0.15
+							},
+							"visible": {
+								"v": false,
+								"r": 1
+							}
+						}
+					},
+					"type": "state",
+					"scriptName": "Step0"
+				},
+				{
+					"id": "ea4ee5a4-67f2-47fa-b035-2d8b6d55cfde",
+					"name": "Step4",
+					"overrides": {
+						"6d5948e4-7e92-4add-9c12-820d47c54e81": {
+							"position": {
+								"v": [
+									2.9149699999999994,
+									-1.342818000000002,
+									0
+								],
+								"r": 0.15
+							},
+							"rotation": {
+								"v": [
+									0,
+									0,
+									180
+								],
+								"r": 0.15
+							},
+							"scale": {
+								"v": [
+									0.5975,
+									0.25,
+									0.25
+								],
+								"r": 0.15
+							},
+							"visible": {
+								"v": true,
+								"r": 1
+							}
+						},
+						"7e062883-e2c3-4c7c-a5ff-fc8e41be5636": {
+							"visible": {
+								"v": false,
+								"r": 1
+							}
+						},
+						"3c6783ec-fcef-43ad-b7c0-4b9a987fe658": {
+							"visible": {
+								"v": false,
+								"r": 1
+							}
+						},
+						"f52565a9-269a-48ae-b700-21da30ae0db1": {
+							"position": {
+								"v": [
+									-2.8,
+									-1,
+									0
+								],
+								"r": 0.15
+							},
+							"visible": {
+								"v": false,
+								"r": 1
+							}
+						},
+						"81e11f13-eeac-4486-976a-167f1da8f5a6": {
+							"position": {
+								"v": [
+									3.5380640000000008,
+									-1.978116000000001,
+									0
+								],
+								"r": 0.15
+							},
+							"visible": {
+								"v": true,
+								"r": 1
+							}
+						},
+						"2841e4c3-251e-443c-ade3-5ffb162987b4": {
+							"position": {
+								"v": [
+									3.5380640000000008,
+									-1.978116000000001,
+									0
+								],
+								"r": 0.15
+							},
+							"visible": {
+								"v": true,
+								"r": 1
+							}
+						}
+					},
+					"type": "state",
+					"scriptName": "Step4"
+				}
+			],
+			"default": "f0da0613-703a-4c34-b631-41a1d6d8b497",
+			"scriptName": "openingToolPosition"
+		}
+	],
+	"mediaFiles": [
+		{
+			"type": "objectType",
+			"title": "Plane",
+			"id": "plane",
+			"etag": "1dd69ff7b38bb4de98db325cb2207801",
+			"scriptName": "Plane"
+		},
+		{
+			"type": "image",
+			"title": "iMac inside.jpeg",
+			"filename": "4e72272e-84be-4c2e-b2cd-2a7349e1e59d.jpeg",
+			"id": "c4affa16-9b63-46ef-805a-b18f22e11c09",
+			"contentWrapping": "riff-image",
+			"etag": "6f3195d20ba939857fe8b776ac592060",
+			"scriptName": "iMac_inside_jpeg"
+		},
+		{
+			"type": "target",
+			"title": "iMac Trigger Sierra.png.zpt",
+			"id": "34ef2cc8-3b3f-4bf8-838d-2ae78df877a5",
+			"filename": "a274f485-1c61-49da-8997-dfba49f9946a.zpt",
+			"etag": "34ac91cc1db5dcd760b00a0c1dd22a24",
+			"contentWrapping": "riff-target",
+			"scriptName": "iMac_TriggerSierra_pngzpt"
+		},
+		{
+			"type": "font",
+			"title": "Roboto.ttf",
+			"id": "Roboto.ttf",
+			"contentWrapping": "riff-font",
+			"etag": "6df74dec576c04654e9c54541795f2f5",
+			"scriptName": "Roboto_ttf"
+		},
+		{
+			"type": "image",
+			"title": "iMac Opening Tool.png",
+			"filename": "5e9cb402-7313-495f-afb8-98ea0457626a.png",
+			"id": "11125d9c-822d-4d7e-aa94-5fdba2f401ad",
+			"contentWrapping": "riff-image",
+			"etag": "228c0f27d8dba5ac3026728f0e57a4c9",
+			"scriptName": "iMac_OpeningTool_png"
+		},
+		{
+			"type": "target",
+			"title": "iMac.png.zpt",
+			"id": "a5a26055-e061-4cd5-a753-36f573e23865",
+			"filename": "9f1bcf83-bebd-4875-bc36-1e5d1d92eb5d.zpt",
+			"etag": "cee59a9de8aaa83a3211695055de95b7",
+			"contentWrapping": "riff-target",
+			"scriptName": "iMac_pngzpt"
+		}
+	],
+	"symbolDefinitions": [],
+	"exports": {},
+	"attachmentPoints": [],
+	"constructionProperties": {},
+	"notes": {
+		"content": "",
+		"showOnSymbolOpen": false
+	},
+	"symbolProperties": {
+		"editorVersion": 11,
+		"backgroundColor": [
+			0.7499999999999999,
+			0.7499999999999999,
+			0.7499999999999999,
+			1
+		],
+		"objectColours": {
+			"0": [
+				0.6000000000000001,
+				0.8,
+				0.8,
+				1
+			],
+			"1": [
+				0.6000000000000001,
+				0.8,
+				0.8,
+				1
+			],
+			"3": [
+				0.6000000000000001,
+				0.8,
+				0.4,
+				1
+			],
+			"4": [
+				0.6000000000000001,
+				0.4,
+				0.4,
+				1
+			],
+			"6": [
+				0.6000000000000001,
+				0.8,
+				0.6000000000000001,
+				1
+			],
+			"7": [
+				0.6000000000000001,
+				0.4,
+				0.8,
+				1
+			],
+			"10": [
+				0.4,
+				0.6000000000000001,
+				0.8,
+				1
+			],
+			"12": [
+				0.6000000000000001,
+				0.6000000000000001,
+				0.6000000000000001,
+				1
+			],
+			"13": [
+				0.4,
+				0.4,
+				0.4,
+				1
+			],
+			"14": [
+				0.4,
+				0.4,
+				0.6000000000000001,
+				1
+			],
+			"e692d7e2-3f8f-4ad7-a034-1a7d9ba9d514": [
+				0.4,
+				0.8,
+				0.8,
+				1
+			],
+			"e733590c-2e92-43f5-930b-babb20d4dc3e": [
+				0.4,
+				0.6000000000000001,
+				0.6000000000000001,
+				1
+			],
+			"b7a8f04e-e4ec-42b2-b809-739652449ffd": [
+				0.6000000000000001,
+				0.8,
+				0.6000000000000001,
+				1
+			],
+			"c0333d80-6e36-432b-b604-ba3b825593f7": [
+				0.6000000000000001,
+				0.8,
+				0.8,
+				1
+			],
+			"620be47f-4880-4285-be8b-274bfa22fca9": [
+				0.8,
+				0.4,
+				0.6000000000000001,
+				1
+			],
+			"0c1651bd-3a6d-49f0-8235-e2241e14f388": [
+				0.6000000000000001,
+				0.4,
+				0.6000000000000001,
+				1
+			],
+			"3c6783ec-fcef-43ad-b7c0-4b9a987fe658": [
+				0.6000000000000001,
+				0.8,
+				0.4,
+				1
+			],
+			"6d5948e4-7e92-4add-9c12-820d47c54e81": [
+				0.8,
+				0.8,
+				0.6000000000000001,
+				1
+			],
+			"7e062883-e2c3-4c7c-a5ff-fc8e41be5636": [
+				0.6000000000000001,
+				0.4,
+				0.4,
+				1
+			],
+			"f52565a9-269a-48ae-b700-21da30ae0db1": [
+				0.6000000000000001,
+				0.6000000000000001,
+				0.6000000000000001,
+				1
+			],
+			"81e11f13-eeac-4486-976a-167f1da8f5a6": [
+				0.4,
+				0.6000000000000001,
+				0.6000000000000001,
+				1
+			],
+			"b8598dfd-34a3-4399-8282-0ac471d505e7": [
+				0.8,
+				0.8,
+				0.6000000000000001,
+				1
+			],
+			"6ad15967-8f16-41ad-8a5b-526c15f2f20e": [
+				0.4,
+				0.4,
+				0.4,
+				1
+			],
+			"25412eae-3108-4f94-b941-c8775e82699a": [
+				0.4,
+				0.4,
+				0.6000000000000001,
+				1
+			],
+			"2841e4c3-251e-443c-ade3-5ffb162987b4": [
+				0.8,
+				0.4,
+				0.8,
+				1
+			]
+		}
+	},
+	"share": {}
+}

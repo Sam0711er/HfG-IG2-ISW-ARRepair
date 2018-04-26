@@ -1,0 +1,284 @@
+{
+	"hierarchy": {
+		"nodeType": "Root",
+		"id": "0",
+		"name": "root",
+		"children": [
+			{
+				"id": "e692d7e2-3f8f-4ad7-a034-1a7d9ba9d514",
+				"name": "iMac Trigger.png.zpt0",
+				"children": [
+					{
+						"id": "e733590c-2e92-43f5-930b-babb20d4dc3e",
+						"name": "iMac inside.jpeg0",
+						"children": [],
+						"parameters": {
+							"materials": [
+								"c4affa16-9b63-46ef-805a-b18f22e11c09"
+							],
+							"type": "plane",
+							"layerMode": "overlay",
+							"scale": [
+								1.78,
+								1,
+								1
+							],
+							"visible": false
+						},
+						"nodeType": "Object",
+						"scriptName": "iMac_inside_jpeg0"
+					}
+				],
+				"parameters": {
+					"source": "d308e18a-de29-4274-ac45-bbf037883125"
+				},
+				"nodeType": "Target",
+				"scriptName": "iMac_Trigger_pngzpt0"
+			},
+			{
+				"id": "12",
+				"name": "show",
+				"nodeType": "Script",
+				"children": [],
+				"parameters": {
+					"code": "var display_shown = symbol.controllers.display.elements.shown;\nvar display_hidden = symbol.controllers.display.elements.hidden;\n\nparent.on(\"show\", parent_show);\nfunction parent_show() {\n    \n    // Make sure we start from fully hidden\n    display_hidden.reset();\n    \n    // Move to the shown state\n    display_shown.activate();\n\t\n}\n\n"
+				},
+				"scriptName": "show0"
+			},
+			{
+				"id": "13",
+				"name": "hide",
+				"nodeType": "Script",
+				"children": [],
+				"parameters": {
+					"code": "var display_hidden = symbol.controllers.display.elements.hidden;\n\n\nparent.on(\"hide\", parent_hide);\nfunction parent_hide() {\n\t\n\t// Once we're fully hidden we should emit the \"hidden\" signal\n\tdisplay_hidden.one(\"complete\", function() {\n\t    symbol.emit(\"hidden\");\n\t});\n\t\n\tdisplay_hidden.activate();\n}"
+				},
+				"scriptName": "hide"
+			},
+			{
+				"id": "4",
+				"name": "accelerometer",
+				"nodeType": "Accelerometer",
+				"children": [],
+				"parameters": {
+					"landscapeState": "10",
+					"portraitState": "11"
+				},
+				"scriptName": "accelerometer"
+			}
+		],
+		"parameters": {
+			"relativeTo": [
+				"Z.screen"
+			]
+		},
+		"scriptName": "root"
+	},
+	"controllers": [
+		{
+			"id": "mig-2",
+			"name": "display",
+			"default": "8",
+			"elements": [
+				{
+					"id": "8",
+					"name": "shown",
+					"overrides": {
+						"0": {
+							"enabled": {
+								"v": true,
+								"r": 1,
+								"p": 1
+							},
+							"visible": {
+								"v": true,
+								"r": 1
+							},
+							"color": {
+								"v": [
+									1,
+									1,
+									1,
+									1
+								],
+								"r": 0.15
+							}
+						}
+					},
+					"type": "state",
+					"scriptName": "shown"
+				},
+				{
+					"id": "9",
+					"name": "hidden",
+					"overrides": {
+						"0": {
+							"enabled": {
+								"v": false,
+								"r": 1
+							},
+							"visible": {
+								"v": false,
+								"r": 1,
+								"p": 1
+							},
+							"color": {
+								"v": [
+									1,
+									1,
+									1,
+									0
+								],
+								"r": 0.15
+							}
+						}
+					},
+					"type": "state",
+					"scriptName": "hidden"
+				}
+			],
+			"scriptName": "display"
+		},
+		{
+			"id": "mig-5",
+			"name": "orientation",
+			"default": "10",
+			"elements": [
+				{
+					"id": "10",
+					"name": "landscape",
+					"overrides": {},
+					"type": "state",
+					"scriptName": "landscape"
+				},
+				{
+					"id": "11",
+					"name": "portrait",
+					"overrides": {},
+					"type": "state",
+					"scriptName": "portrait"
+				}
+			],
+			"scriptName": "orientation"
+		}
+	],
+	"mediaFiles": [
+		{
+			"type": "objectType",
+			"title": "Plane",
+			"id": "plane",
+			"etag": "1dd69ff7b38bb4de98db325cb2207801",
+			"scriptName": "Plane"
+		},
+		{
+			"type": "target",
+			"title": "iMac Trigger.png.zpt",
+			"id": "d308e18a-de29-4274-ac45-bbf037883125",
+			"filename": "b770ee82-80cb-4dde-8ee7-4814386a7699.zpt",
+			"etag": "4598167ac9a4d51fdc4676427976ba49",
+			"contentWrapping": "riff-target",
+			"scriptName": "iMac_Trigger_pngzpt"
+		},
+		{
+			"type": "image",
+			"title": "iMac inside.jpeg",
+			"filename": "4e72272e-84be-4c2e-b2cd-2a7349e1e59d.jpeg",
+			"id": "c4affa16-9b63-46ef-805a-b18f22e11c09",
+			"contentWrapping": "riff-image",
+			"etag": "6f3195d20ba939857fe8b776ac592060",
+			"scriptName": "iMac_inside_jpeg"
+		}
+	],
+	"symbolDefinitions": [],
+	"exports": {},
+	"attachmentPoints": [],
+	"constructionProperties": {},
+	"notes": {
+		"content": "",
+		"showOnSymbolOpen": false
+	},
+	"symbolProperties": {
+		"editorVersion": 11,
+		"backgroundColor": [
+			0.7499999999999999,
+			0.7499999999999999,
+			0.7499999999999999,
+			1
+		],
+		"objectColours": {
+			"0": [
+				0.6000000000000001,
+				0.8,
+				0.8,
+				1
+			],
+			"1": [
+				0.6000000000000001,
+				0.8,
+				0.8,
+				1
+			],
+			"3": [
+				0.6000000000000001,
+				0.8,
+				0.4,
+				1
+			],
+			"4": [
+				0.6000000000000001,
+				0.4,
+				0.4,
+				1
+			],
+			"6": [
+				0.6000000000000001,
+				0.8,
+				0.6000000000000001,
+				1
+			],
+			"7": [
+				0.6000000000000001,
+				0.4,
+				0.8,
+				1
+			],
+			"10": [
+				0.4,
+				0.6000000000000001,
+				0.8,
+				1
+			],
+			"12": [
+				0.6000000000000001,
+				0.6000000000000001,
+				0.6000000000000001,
+				1
+			],
+			"13": [
+				0.4,
+				0.4,
+				0.4,
+				1
+			],
+			"14": [
+				0.4,
+				0.4,
+				0.6000000000000001,
+				1
+			],
+			"e692d7e2-3f8f-4ad7-a034-1a7d9ba9d514": [
+				0.4,
+				0.8,
+				0.8,
+				1
+			],
+			"e733590c-2e92-43f5-930b-babb20d4dc3e": [
+				0.4,
+				0.6000000000000001,
+				0.6000000000000001,
+				1
+			]
+		}
+	},
+	"share": {}
+}
