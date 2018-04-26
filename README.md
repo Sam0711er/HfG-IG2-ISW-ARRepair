@@ -6,7 +6,7 @@ Hey, welcome to **ARRepair**!
 
 Repairing computers and smartphones isn't easy. Nowadays, a lot of critical and complex components are built into these devices and while you might only want to replace your display or hard drive, it's entirely possible you might accidentally destroy some other component while in the replacement process. ARRepair wants to make replacing and repairing components easier. It is an AR guide that you can use on your device in order to better understand instructions of the dis-/assembly process.
 
-This specific ARRepair tutorial shows you how to replace the hard drive of a 27" iMac. It was created in a workshop of the International Seminar Week 2018 at [HfG Schwäbisch Gmünd](https://github.com/hfg-gmuend).
+This specific ARRepair tutorial shows you how to replace the hard drive of a 27" iMac. It was created in a workshop of the International Seminar Week 2018 at [HfG Schwäbisch Gmünd](https://github.com/hfg-gmuend). A demo video is available over [here](https://youtu.be/89siVpELS94).
 
 
 ## Setup & Usage
