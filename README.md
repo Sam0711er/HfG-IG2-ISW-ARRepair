@@ -17,6 +17,8 @@ This specific ARRepair tutorial shows you how to replace the hard drive of a 27"
 4. Point your phone towards the iMac (I recommend landscape)
 5. Have fun! 😀🎉
 
+(Oh, and in case you don't have an iMac nearby, just open Poster.pdf and use that)
+
 ![ARRepair](ARRepair.png)
 
 
